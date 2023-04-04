@@ -408,6 +408,7 @@
 }
 
 .overal-content-songs-block {
+    position: relative;
     height: 260px;
     overflow-y: scroll;
     display: flex;
