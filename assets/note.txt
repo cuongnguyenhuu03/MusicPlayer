@@ -1,0 +1,9 @@
+1. slide ảnh
+1. chạy nhạc (xử lí nổi bọt)
+2. chi tiết phát nhạc (xử lí nổi bọt)
+3. discover
+4. zingchart
+5. radio
+6. flowwing
+8. responsive
+

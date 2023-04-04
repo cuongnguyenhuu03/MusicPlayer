@@ -1,0 +1,2404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huu Cuong</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/audio/">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.1-web/fontawesome-free-6.2.1-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="app">
+        <div id="menu">
+            <div class="logo" style="background-image: url(./assets/img/logo/main-logo-1.svg) ;"></div>
+            <div class="main-menu">
+                <ul class="main-menu-list">
+                    <li class="main-menu-item hover active">
+                        <i class="fa-solid fa-headphones-simple"></i>
+                        <span>Personal</span>
+                    </li>
+                    <li class="main-menu-item hover">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        <span>Discover</span>
+                    </li>
+                    <li class="main-menu-item hover">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span>#Zingchart</span>
+                    </li>
+                    <li class="main-menu-item hover">
+                        <i class="fa-solid fa-compact-disc"></i>
+                        <span>Radio</span>
+                    </li>
+                    <li class="main-menu-item hover">
+                        <i class="fa-regular fa-rectangle-list"></i>
+                        <span>Following</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-nav">
+                <div class="sub-menu">
+                    <ul class="sub-menu-list">
+                        <li class="sub-menu-item hover">
+                            <i class="fa-solid fa-music"></i>
+                            <span>New Songs</span>
+                        </li>
+                        <li class="sub-menu-item hover">
+                            <i class="fa-solid fa-grip"></i>
+                            <span>Genre</span>
+                        </li>
+                        <li class="sub-menu-item hover">
+                            <i class="fa-regular fa-star"></i>
+                            <span>Top 100</span>
+                        </li>
+                        <li class="sub-menu-item hover">
+                            <i class="fa-regular fa-circle-play"></i>
+                            <span>Mv</span>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="menu-buy-vip-item">
+                    <p>listen to music without advertisement</p>
+                    <button class="buy-btn">BUY VIP</button>
+                </div>
+    
+                <div class="menu-library">
+                    <ul class="menu-library-list">
+                        <li class="menu-library-item">
+                            LIBRARY
+                            <i class="fa-solid fa-pen"></i>
+                        </li>
+                        <li class="menu-library-item">
+                            <i class="fa-solid fa-radio"></i>
+                            Songs
+                        </li>
+                        <li class="menu-library-item">
+                            <i class="fa-regular fa-rectangle-list"></i>
+                            Playlist
+                        </li>
+                        <li class="menu-library-item">
+                            <i class="fa-regular fa-clock"></i>
+                            Recently
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="menu-recently">
+                    <ul class="menu-recently-list">
+                        <li class="menu-recently-item">
+                            Love songs
+                        </li>
+                        <li class="menu-recently-item">
+                            Januarry
+                        </li>
+                        <li class="menu-recently-item">
+                            International Music
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu-create-playlist">
+                <i class="fa-solid fa-plus"></i>
+                <span>Create New Playlist</span>
+            </div>
+            
+        </div>
+
+        <div id="container">
+            <div class="container-nav">
+                <div class="container-nav-content wide-50">
+                    <div class="container-nav-search">
+                        <div class="container-nav-search-btn">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        
+                        <div class="container-nav-search-input">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="What do you want to listen to..." class="container-nav-search-input-input-form">
+                        </div>
+                    </div>
+
+                    <div class="container-nav-btn">
+                        <div class="container-nav-btn-item">
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        </div>
+                        <div class="container-nav-btn-item">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <div class="container-nav-btn-item" id="friend">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+                        <div class="container-nav-btn-item-user" style="background-image: url(./assets/img/User/user_1.jpg);"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-content active">
+                <div class="container-content-header">
+                    <div class="container-content-header-img" style="background-image: url(./assets/img/User/user_1.jpg);"></div>
+                    <div class="container-content-header-btn">
+                        <span class="content-header-btn-buy-vip">Buy VIP Now</span>
+                        <span class="content-header-btn-recive">Recive VIP code</span>
+                        <a href="" class="content-header-btn-option">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </a>
+                    </div> 
+                    
+                    <div class="container-content-header-user">
+                        <div class="content-header-user-img" style="background-image: url(./assets/img/User/user_1.jpg);">
+
+                        </div>
+
+                        <span class="content-header-user-name">Nguyen Huu Cuong</span>
+                    </div>
+                </div>
+                
+
+                <div class="container-main-content">
+                    <div class="wide-50">
+                        <div class="main-content-nav">
+                            <ul class="main-content-nav-list">
+                                <li class="main-content-nav-item active">
+                                    OVERAL
+                                </li>
+                                <li class="main-content-nav-item">
+                                    SONGS
+                                </li>
+                                <li class="main-content-nav-item">
+                                    PLAYLIST
+                                </li>
+                                <li class="main-content-nav-item">
+                                    ALBUM
+                                </li>
+                                <li class="main-content-nav-item">
+                                    MV
+                                </li>
+                                <li class="main-content-nav-item">
+                                    ARTIST
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="container-main-content-overal margin-bt active">
+                            <div class="container-main-content-songs-heading">
+                                <div class="content-overal-header-title">
+                                    <span>Songs</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="main-content-songs-heading-btn">
+                                    <div class="songs-heading-upload-btn">
+                                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                         UPLOAD
+                                    </div>
+        
+                                    <div class="songs-heading-playall-btn">
+                                        <i class="fa-solid fa-play"></i>
+                                        PLAY ALL
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overal-content-songs">
+                                <div class="overal-content-songs-img"></div>
+
+                                <div class="overal-content-songs-block">
+                                    <ul class="overal-content-songs-list"></ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-main-content-overal margin-bt active ">
+                            <div class="container-main-content-overal-header">
+                                <div class="content-overal-header-title">
+                                    <span>Playlist</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="content-overal-header-transfer">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                            </div>
+                            <div class="row content-overal-list">
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-create-playlist">
+                                        <i class="fa-solid fa-plus"></i>
+                                        <span>Create new playlist</span>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p1.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Chilled Hits</span>
+                                            <span class="content-overal-item-author">Selena Gomez</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p2.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Fresh & Chill</span>
+                                            <span class="content-overal-item-author">David Bowie</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p3.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Bad Guy</span>
+                                            <span class="content-overal-item-author">Billie Eilish</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p5.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">To The Moon</span>
+                                            <span class="content-overal-item-author">John Lennon</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p12.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">To The Moon</span>
+                                            <span class="content-overal-item-author">John Lennon</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p15.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">To The Moon</span>
+                                            <span class="content-overal-item-author">John Lennon</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p16.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">To The Moon</span>
+                                            <span class="content-overal-item-author">John Lennon</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p17.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">To The Moon</span>
+                                            <span class="content-overal-item-author">John Lennon</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p18.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">To The Moon</span>
+                                            <span class="content-overal-item-author">John Lennon</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p19.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">To The Moon</span>
+                                            <span class="content-overal-item-author">John Lennon</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p6.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">In Your Eyes</span>
+                                            <span class="content-overal-item-author">Selena Gomez</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p4.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Fire On Fire</span>
+                                            <span class="content-overal-item-author">Sam Smith</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p7.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Cry On My Shouder</span>
+                                            <span class="content-overal-item-author">Selena Gomez</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p8.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Stay With Me</span>
+                                            <span class="content-overal-item-author">Paul McCartney</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p9.png);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">One Call Away</span>
+                                            <span class="content-overal-item-author">Taylor Swith</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p10.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Love You Like A Love Song</span>
+                                            <span class="content-overal-item-author">Selena Gomez</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-main-content-overal active">
+                            <div class="container-main-content-overal-header">
+                                <div class="content-overal-header-title">
+                                    <span>Album</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="content-overal-header-transfer">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                            </div>
+                            <div class="row content-overal-list">
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/Album/a1.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Peaceful Piano</span>
+                                            <span class="content-overal-item-author">Selena ssGomez</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/Album/a2.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Focus Jazz</span>
+                                            <span class="content-overal-item-author">Jonh Lemon</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/Album/a3.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Chillout</span>
+                                            <span class="content-overal-item-author">David Bowie</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/Album/a4.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Workday Lounge</span>
+                                            <span class="content-overal-item-author">Billie Eilish</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/Album/a5.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Pop Chill</span>
+                                            <span class="content-overal-item-author">John Lennon</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/Album/a6.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">In Your Eyes</span>
+                                            <span class="content-overal-item-author">Selena Gomez</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/Album/a7.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Fire On Fire</span>
+                                            <span class="content-overal-item-author">Sam Smith</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/Album/a8.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Cry On My Shouder</span>
+                                            <span class="content-overal-item-author">Selena Gomez</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/playlist/p2.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Stay With Me</span>
+                                            <span class="content-overal-item-author">Paul McCartney</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/Album/a9.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">One Call Away</span>
+                                            <span class="content-overal-item-author">Taylor Swith</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/Album/a10.webp);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Love You Like A Love Song</span>
+                                            <span class="content-overal-item-author">Selena Gomez</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <div class="content-overal-item-img" style="background-image: url(./assets/img/Album/a11.jpg);">
+                                                <div class="content-overal-item-img-status">
+                                                    <i class="fa-solid fa-heart like-btn active"></i>
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="content-overal-item-info">
+                                            <span class="content-overal-item-name">Love You Like A Love Song</span>
+                                            <span class="content-overal-item-author">Selena Gomez</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="container-main-content-overal margin-bt active"> 
+                            <div class="container-main-content-overal-header">
+                                <div class="content-overal-header-title">
+                                    <span>MV</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="content-overal-header-transfer">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                            </div>
+
+                            <div class="row content-overal-list">
+                                <div class="col l-4 content-overal-item-mv ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <span class="img-status-mv-time">04:39</span>
+                                            <div class="content-overal-item-img-mv" style="background-image: url(./assets/img/MV/mv2.webp);">
+                                                <div class="content-overal-item-img-status-mv">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        <div class="content-overal-item-info-mv">
+                                            <div class="item-info-mv-img" style="background-image: url(./assets/img/artist/ar6.png);"></div>
+                                            <div class="content-overal-item-info-block">
+                                                <span class="content-overal-item-info-title">Fetish</span>
+                                                <span class="content-overal-item-info-author">Selena Gomez</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-4 content-overal-item-mv ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <span class="img-status-mv-time">04:39</span>
+                                            <div class="content-overal-item-img-mv" style="background-image: url(./assets/img/MV/mv6.webp);">
+                                                <div class="content-overal-item-img-status-mv">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-mv">
+                                            <div class="item-info-mv-img" style="background-image: url(./assets/img/artist/ar8.jpg);"></div>
+                                            <div class="content-overal-item-info-block">
+                                                <span class="content-overal-item-info-title">Love You Like A Love Song</span>
+                                                <span class="content-overal-item-info-author">Paul McCartney</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-4 content-overal-item-mv ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <span class="img-status-mv-time">04:39</span>
+                                            <div class="content-overal-item-img-mv" style="background-image: url(./assets/img/MV/mv13.webp);">
+                                                <div class="content-overal-item-img-status-mv">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-mv">
+                                            <div class="item-info-mv-img" style="background-image: url(./assets/img/artist/ar7.jpg);"></div>
+                                            <div class="content-overal-item-info-block">
+                                                <span class="content-overal-item-info-title">Fly Me To The Moon</span>
+                                                <span class="content-overal-item-info-author">Selena Gomez</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-4 content-overal-item-mv ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <span class="img-status-mv-time">04:39</span>
+                                            <div class="content-overal-item-img-mv" style="background-image: url(./assets/img/MV/mv1.webp);">
+                                                <div class="content-overal-item-img-status-mv">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-mv">
+                                            <div class="item-info-mv-img" style="background-image: url(./assets/img/artist/ar9.jpg);"></div>
+                                            <div class="content-overal-item-info-block">
+                                                <span class="content-overal-item-info-title">Fetish</span>
+                                                <span class="content-overal-item-info-author">Selena Gomez</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-4 content-overal-item-mv ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <span class="img-status-mv-time">04:39</span>
+                                            <div class="content-overal-item-img-mv" style="background-image: url(./assets/img/MV/mv3.webp);">
+                                                <div class="content-overal-item-img-status-mv">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-mv">
+                                            <div class="item-info-mv-img" style="background-image: url(./assets/img/artist/ar10.jpg);"></div>
+                                            <div class="content-overal-item-info-block">
+                                                <span class="content-overal-item-info-title">Fetish</span>
+                                                <span class="content-overal-item-info-author">Selena Gomez</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-4 content-overal-item-mv ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <span class="img-status-mv-time">04:39</span>
+                                            <div class="content-overal-item-img-mv" style="background-image: url(./assets/img/MV/mv4.webp);">
+                                                <div class="content-overal-item-img-status-mv">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-mv"> 
+                                            <div class="item-info-mv-img" style="background-image: url(./assets/img/artist/ar11.jpg);"></div>
+                                            <div class="content-overal-item-info-block">
+                                                <span class="content-overal-item-info-title">Fetish</span>
+                                                <span class="content-overal-item-info-author">Selena Gomez</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-4 content-overal-item-mv ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <span class="img-status-mv-time">04:39</span>
+                                            <div class="content-overal-item-img-mv" style="background-image: url(./assets/img/MV/mv8.webp);">
+                                                <div class="content-overal-item-img-status-mv">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-mv">
+                                            <div class="item-info-mv-img" style="background-image: url(./assets/img/artist/ar1.png);"></div>
+                                            <div class="content-overal-item-info-block">
+                                                <span class="content-overal-item-info-title">Fetish</span>
+                                                <span class="content-overal-item-info-author">Selena Gomez</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="col l-4 content-overal-item-mv ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <span class="img-status-mv-time">04:39</span>
+                                            <div class="content-overal-item-img-mv" style="background-image: url(./assets/img/MV/mv7.webp);">
+                                                <div class="content-overal-item-img-status-mv">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-mv">
+                                            <div class="item-info-mv-img" style="background-image: url(./assets/img/artist/ar13.jpg);"></div>
+                                            <div class="content-overal-item-info-block">
+                                                <span class="content-overal-item-info-title">Fetish</span>
+                                                <span class="content-overal-item-info-author">Selena Gomez</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-4 content-overal-item-mv ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <span class="img-status-mv-time">04:39</span>
+                                            <div class="content-overal-item-img-mv" style="background-image: url(./assets/img/MV/mv5.webp);">
+                                                <div class="content-overal-item-img-status-mv">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-mv">
+                                            <div class="item-info-mv-img" style="background-image: url(./assets/img/artist/ar12.jpg);"></div>
+                                            <div class="content-overal-item-info-block">
+                                                <span class="content-overal-item-info-title">Fetish</span>
+                                                <span class="content-overal-item-info-author">Selena Gomez</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="col l-4 content-overal-item-mv ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <span class="img-status-mv-time">04:39</span>
+                                            <div class="content-overal-item-img-mv" style="background-image: url(./assets/img/MV/mv9.webp);">
+                                                <div class="content-overal-item-img-status-mv">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-mv">
+                                            <div class="item-info-mv-img" style="background-image: url(./assets/img/artist/ar2.png);"></div>
+                                            <div class="content-overal-item-info-block">
+                                                <span class="content-overal-item-info-title">Fetish</span>
+                                                <span class="content-overal-item-info-author">Selena Gomez</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-4 content-overal-item-mv ">
+                                    <div class="content-overal-item-container">
+                                        <div class="show-img">
+                                            <span class="img-status-mv-time">04:39</span>
+                                            <div class="content-overal-item-img-mv" style="background-image: url(./assets/img/MV/mv10.webp);">
+                                                <div class="content-overal-item-img-status-mv">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-mv"> 
+                                            <div class="item-info-mv-img" style="background-image: url(./assets/img/artist/ar1.png);"></div>
+                                            <div class="content-overal-item-info-block">
+                                                <span class="content-overal-item-info-title">Fetish</span>
+                                                <span class="content-overal-item-info-author">Selena Gomez</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+
+                        <div class="container-main-content-overal margin-bt active">
+                            <div class="container-main-content-overal-header">
+                                <div class="content-overal-header-title">
+                                    <span>Artist</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="content-overal-header-transfer">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                            </div>
+
+                            <div class="row content-overal-list">
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar3.jpg);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>    
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar4.jpg);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>  
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar5\ \(2\).png);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>   
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar6.png);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>   
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar7.jpg);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar1.png);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar2.png);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar8.jpg);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar9.jpg);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar10.jpg);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar11.jpg);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar12.jpg);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 content-overal-item ">
+                                    <div class="content-overal-item-container-artist">
+                                        <div class="show-img-artist">
+                                            <div class="content-overal-item-img-artist-block">
+                                                <div class="content-overal-item-img-artist" style="background-image: url(./assets/img/artist/ar1.png);"></div>
+                                                <div class="content-overal-item-img-status-artist">
+                                                    <i class="fa-solid fa-play play-hover"></i>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <div class="content-overal-item-info-artist">   
+                                            <span class="item-info-artist-name">Shawn Mendes</span>
+                                            <span class="item-info-artist-follower">198k follower</span>
+                                            <div class="item-info-artist-followed">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span class="item-info-artist-follow">Follower</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="container-content">
+                <div class="container-content-wrap wide-50">
+
+                    <div class="content-discover-title">
+                        <span class="discover-title">Browse all</span>
+                        <div class="discover-btn">
+                            <span class="featured-discover-btn">
+                                FEATURED
+                            </span>
+                            <span class="recently-discover-btn">
+                                RECENTLY
+                            </span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="content-discover-container">
+                        <div class="row content-discover-wrap">
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(82, 43, 82);">
+                                    <span>Podcasts</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d11.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(33, 126, 100);">
+                                    <span>Live Events</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d9.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color:rgb(83, 122, 161);">
+                                    <span>Made For You</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d27.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color:rgb(165, 103, 82);">
+                                    <span>Love Songs</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d10.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(141, 103, 171);">
+                                    <span>Live Events</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d18.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(30, 50, 100);">
+                                    <span>Made For You</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d28.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(145, 168, 82);;">
+                                    <span>New Release</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d12.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(119, 101, 212);;">
+                                    <span>Pop</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d8.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(191, 49, 98);;">
+                                    <span>Charts</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d15.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(125, 35, 55);;">
+                                    <span>Fresh Finds</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d16.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(91, 140, 200);">
+                                    <span>Discover</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d2.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(191, 92, 173);">
+                                    <span>Mood</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d5.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(81, 151, 73);">
+                                    <span>Indie</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d19.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(82, 43, 82);">
+                                    <span>Chill</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d11.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(33, 126, 100);">
+                                    <span>Party</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d9.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color:rgb(83, 122, 161);">
+                                    <span>Love</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d27.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color:rgb(165, 103, 82);">
+                                    <span>Trending</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d10.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(141, 103, 171);">
+                                    <span>Jazz</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d18.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(30, 50, 100);">
+                                    <span>Podcasts</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d28.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(145, 168, 82);;">
+                                    <span>Podcastđewds</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d12.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(119, 101, 212);;">
+                                    <span>Podcasts</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d8.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(191, 49, 98);;">
+                                    <span>Podcasts</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d15.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(125, 35, 55);;">
+                                    <span>Podcasts</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d16.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(91, 140, 200);">
+                                    <span>Podcasts</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d2.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(191, 92, 173);">
+                                    <span>Podcasts</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d5.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="col l-2-4">
+                                <div class="content-discover-item" style="background-color: rgb(81, 151, 73);">
+                                    <span>Podcasts</span>
+                                    <div class="content-discover-item-img" style="background-image: url(./assets/img/Discover/d19.jpg);"></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        
+            <div class="container-content">
+                <div class="container-content-wrap wide-50">
+                    <div class="zingchart-tiltle">
+                        <span>#Zingchart</span>
+                        <div class="music-control-song">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+
+                    
+
+                    <ul class="zingchart-list">
+                        <li class="zingchart-item">
+                            <div class="zingchart-item-header">
+                                <span class="zingchart-item-rank top-1">1</span>
+                                <div class="zingchart-rank-status-up"></div>
+                                <div class="zingchart-item-img" style="background-image:url(./assets/img/songs/im_not_the_only_one.png) ;">
+                                    <i id="play-btn"class="fa-solid fa-play"></i>
+                                    <div class="blur-backgound-zingchart"></div>
+                                </div>
+                                <div class="zingchart-item-infor">
+                                    <span class="zingchart-item-tite">I'm Not The Only One</span>
+                                    <span class="zingchart-item-author">Shame Smith</span>
+                                </div>
+                            </div>
+
+                            <div class="zingchart-item-note">
+                                <span>I'm Not The Only One</span>
+                            </div>
+
+                            <div class="zingchart-item-stt">
+                                <span>03:59</span>
+                            </div>
+                        </li>
+
+                        <li class="zingchart-item">
+                            <div class="zingchart-item-header">
+                                <span class="zingchart-item-rank top-2">2</span>
+                                <div class="zingchart-rank-status-up"></div>
+                                <div class="zingchart-item-img" style="background-image:url(./assets/img/songs/Fire_on_fire.jpg) ;">
+                                    <i id="play-btn"class="fa-solid fa-play"></i>
+                                    <div class="blur-backgound-zingchart"></div>
+                                </div>
+                                <div class="zingchart-item-infor">
+                                    <span class="zingchart-item-tite">Fire On Fire</span>
+                                    <span class="zingchart-item-author">Shame Smith</span>
+                                </div>
+                            </div>
+
+                            <div class="zingchart-item-note">
+                                <span>Fire_on_fire</span>
+                            </div>
+
+                            <div class="zingchart-item-stt">
+                                <span>05:12</span>
+                            </div>
+                        </li>
+
+                        <li class="zingchart-item">
+                            <div class="zingchart-item-header">
+                                <span class="zingchart-item-rank top-3">3</span>
+                                <div class="zingchart-rank-status-down"></div>
+                                <div class="zingchart-item-img" style="background-image:url(./assets/img/songs/fly_me_to_the_moon.jpg) ;">
+                                    <i id="play-btn"class="fa-solid fa-play"></i>
+                                    <div class="blur-backgound-zingchart"></div>
+                                </div>
+                                <div class="zingchart-item-infor">
+                                    <span class="zingchart-item-tite">Fly Me To The Moon</span>
+                                    <span class="zingchart-item-author">TayLor Swith</span>
+                                </div>
+                            </div>
+
+                            <div class="zingchart-item-note">
+                                <span>Fly Me Too The Moon</span>
+                            </div>
+
+                            <div class="zingchart-item-stt">
+                                <span>04:42</span>
+                            </div>
+                        </li>
+
+                        <li class="zingchart-item">
+                            <div class="zingchart-item-header">
+                                <span class="zingchart-item-rank">4</span>
+                                <div class="zingchart-rank-status-new"></div>
+                                <div class="zingchart-item-img" style="background-image:url(./assets/img/songs/talking_to_the_moon.jpg) ;">
+                                    <i id="play-btn"class="fa-solid fa-play"></i>
+                                    <div class="blur-backgound-zingchart"></div>
+                                </div>
+                                <div class="zingchart-item-infor">
+                                    <span class="zingchart-item-tite">Talking To The Moon</span>
+                                    <span class="zingchart-item-author">Shame Smith</span>
+                                </div>
+                            </div>
+
+                            <div class="zingchart-item-note">
+                                <span>Talking To The Moon</span>
+                            </div>
+
+                            <div class="zingchart-item-stt">
+                                <span>04:13</span>
+                            </div>
+                        </li>
+
+                        <li class="zingchart-item">
+                            <div class="zingchart-item-header">
+                                <span class="zingchart-item-rank">5</span>
+                                <div class="zingchart-rank-status-new"></div>
+                                <div class="zingchart-item-img" style="background-image:url(./assets/img/songs/havana.png) ;">
+                                    <i id="play-btn"class="fa-solid fa-play"></i>
+                                    <div class="blur-backgound-zingchart"></div>
+                                </div>
+                                <div class="zingchart-item-infor">
+                                    <span class="zingchart-item-tite">Havana</span>
+                                    <span class="zingchart-item-author">Selena Gonme</span>
+                                </div>
+                            </div>
+
+                            <div class="zingchart-item-note">
+                                <span>Havana</span>
+                            </div>
+
+                            <div class="zingchart-item-stt">
+                                <span>05:12</span>
+                            </div>
+                        </li>
+
+                        <li class="zingchart-item">
+                            <div class="zingchart-item-header">
+                                <span class="zingchart-item-rank">6</span>
+                                <div class="zingchart-rank-status-new"></div>
+                                <div class="zingchart-item-img" style="background-image:url(./assets/img/songs/love_in_the_dark.jpg) ;">
+                                    <i id="play-btn"class="fa-solid fa-play"></i>
+                                    <div class="blur-backgound-zingchart"></div>
+                                </div>
+                                <div class="zingchart-item-infor">
+                                    <span class="zingchart-item-tite">Love In The Dark</span>
+                                    <span class="zingchart-item-author">Adele</span>
+                                </div>
+                            </div>
+
+                            <div class="zingchart-item-note">
+                                <span>Adele</span>
+                            </div>
+
+                            <div class="zingchart-item-stt">
+                                <span>05:12</span>
+                            </div>
+                        </li>
+
+
+                        <li class="zingchart-item">
+                            <div class="zingchart-item-header">
+                                <span class="zingchart-item-rank">7</span>
+                                <div class="zingchart-rank-status-up"></div>
+                                <div class="zingchart-item-img" style="background-image:url(./assets/img/songs/One_Call_Away.jpg) ;">
+                                    <i id="play-btn"class="fa-solid fa-play"></i>
+                                    <div class="blur-backgound-zingchart"></div>
+                                </div>
+                                <div class="zingchart-item-infor">
+                                    <span class="zingchart-item-tite">One Call Away</span>
+                                    <span class="zingchart-item-author">Shame Smith</span>
+                                </div>
+                            </div>
+
+                            <div class="zingchart-item-note">
+                                <span>I'm Not The Only One</span>
+                            </div>
+
+                            <div class="zingchart-item-stt">
+                                <span>05:12</span>
+                            </div>
+                        </li>
+
+                        <li class="zingchart-item">
+                            <div class="zingchart-item-header">
+                                <span class="zingchart-item-rank">8</span>
+                                <div class="zingchart-rank-status-down"></div>
+                                <div class="zingchart-item-img" style="background-image:url(./assets/img/songs/we_dont_talk_anymore.jpg) ;">
+                                    <i id="play-btn"class="fa-solid fa-play"></i>
+                                    <div class="blur-backgound-zingchart"></div>
+                                </div>
+                                <div class="zingchart-item-infor">
+                                    <span class="zingchart-item-tite">We Dont Talk Anymore</span>
+                                    <span class="zingchart-item-author">Shame Smith</span>
+                                </div>
+                            </div>
+
+                            <div class="zingchart-item-note">
+                                <span>I'm Not The Only One</span>
+                            </div>
+
+                            <div class="zingchart-item-stt">
+                                <span>05:12</span>
+                            </div>
+                        </li>
+
+                        <li class="zingchart-item">
+                            <div class="zingchart-item-header">
+                                <span class="zingchart-item-rank">9</span>
+                                <div class="zingchart-rank-status-new"></div>
+                                <div class="zingchart-item-img" style="background-image:url(./assets/img/songs/to_good_at_goodbye.png) ;">
+                                    <i id="play-btn"class="fa-solid fa-play"></i>
+                                    <div class="blur-backgound-zingchart"></div>
+                                </div>
+                                <div class="zingchart-item-infor">
+                                    <span class="zingchart-item-tite">To Good At Goodbye</span>
+                                    <span class="zingchart-item-author">Shame Smith</span>
+                                </div>
+                            </div>
+
+                            <div class="zingchart-item-note">
+                                <span>I'm Not The Only One</span>
+                            </div>
+
+                            <div class="zingchart-item-stt">
+                                <span>05:12</span>
+                            </div>
+                        </li>
+
+                        <li class="zingchart-item">
+                            <div class="zingchart-item-header">
+                                <span class="zingchart-item-rank">10</span>
+                                <div class="zingchart-rank-status-new"></div>
+                                <div class="zingchart-item-img" style="background-image:url(./assets/img/songs/im_not_the_only_one.png) ;">
+                                    <i id="play-btn"class="fa-solid fa-play"></i>
+                                    <div class="blur-backgound-zingchart"></div>
+                                </div>
+                                <div class="zingchart-item-infor">
+                                    <span class="zingchart-item-tite">I'm Not The Only One</span>
+                                    <span class="zingchart-item-author">Shame Smith</span>
+                                </div>
+                            </div>
+
+                            <div class="zingchart-item-note">
+                                <span>I'm Not The Only One</span>
+                            </div>
+
+                            <div class="zingchart-item-stt">
+                                <span>05:12</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container-content">
+                
+            </div>
+
+            <div class="container-content">
+                <div class="container-content-wrap wide-50">
+                    <div class="following-title-post">
+                        <span class="following-title-post">Post</span>
+                    </div>
+                    <div class="following-btn">
+                        <span class="featured-discover-btn">
+                            FEATURED
+                        </span>
+                        <span class="recently-discover-btn">
+                            RECENTLY
+                        </span>
+                    </div>
+
+                    <div class="following-container row">
+                        <div class="following-container-left col l-4">
+
+                            <div class="following-container-post">
+                                <div class="following-container-post-heading">
+                                    <div class="following-container-post-avt" style="background-image: url(./assets/img/artist/ar3.jpg);"></div>
+                                    <div class="following-container-post-info">
+                                        <div class="post-info-title">
+                                            <span class="post-info-name">Lea Elui G</span>
+                                            <i class="fa-solid fa-circle"></i>
+                                            <span class="post-info-following">Following</span>
+                                        </div>
+                                        <div class="following-container-post-time">
+                                            <span>14th october on 14:36 PM</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="following-container-post-caption">
+                                    <span>
+                                        No matter how ‘Busy’ a person is… if they really love, they will always find the time for you!</span>
+                                </div>
+                                <img class="following-container-post-img" src="./assets/img/Post/p5.jpg" alt="">
+
+                                <div class="following-container-post-reaction">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span>450</span>
+                                    <i class="fa-regular fa-comment reaction-cmt-icon"></i>
+                                    <span>67</span> 
+                                </div>
+
+                            </div>
+
+                            <div class="following-container-post">
+                                <div class="following-container-post-heading">
+                                    <div class="following-container-post-avt" style="background-image: url(./assets/img/artist/ar3.jpg);"></div>
+                                    <div class="following-container-post-info">
+                                        <div class="post-info-title">
+                                            <span class="post-info-name">Lea Elui G</span>
+                                            <i class="fa-solid fa-circle"></i>
+                                            <span class="post-info-following">Following</span>
+                                        </div>
+                                        <div class="following-container-post-time">
+                                            <span>14th october on 14:36 PM</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="following-container-post-caption">
+                                    <span>
+                                        Meeting you is the best thing that ever happened to me</span>
+                                </div>
+                                <img class="following-container-post-img" src="./assets/img/Post/p8.webp" alt="">
+
+                                <div class="following-container-post-reaction">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span>450</span>
+                                    <i class="fa-regular fa-comment reaction-cmt-icon"></i>
+                                    <span>67</span> 
+                                </div>
+
+                            </div>
+
+                            <div class="following-container-post">
+                                <div class="following-container-post-heading">
+                                    <div class="following-container-post-avt" style="background-image: url(./assets/img/artist/ar3.jpg);"></div>
+                                    <div class="following-container-post-info">
+                                        <div class="post-info-title">
+                                            <span class="post-info-name">Lea Elui G</span>
+                                            <i class="fa-solid fa-circle"></i>
+                                            <span class="post-info-following">Following</span>
+                                        </div>
+                                        <div class="following-container-post-time">
+                                            <span>14th october on 14:36 PM</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="following-container-post-caption">
+                                    <span>
+                                        I’m excited to be the new brand ambassador for @davidyurman, and to be featured in their spring campaign,
+                                         Nature’s Artistry, celebrating nature and the creative inspiration it provides</span>
+                                </div>
+                                <img class="following-container-post-img" src="./assets/img/Post/p14.jpg" alt="">
+
+                                <div class="following-container-post-reaction">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span>450</span>
+                                    <i class="fa-regular fa-comment reaction-cmt-icon"></i>
+                                    <span>67</span> 
+                                </div>
+
+                            </div>
+
+                            
+                        
+
+                            
+
+                            
+                            
+                        </div>
+
+                        <div class="following-container-mid col l-4">
+
+                            <div class="following-container-post">
+                                <div class="following-container-post-heading">
+                                    <div class="following-container-post-avt" style="background-image: url(./assets/img/artist/ar3.jpg);"></div>
+                                    <div class="following-container-post-info">
+                                        <div class="post-info-title">
+                                            <span class="post-info-name">Shawn Mendes</span>
+                                            <i class="fa-solid fa-circle"></i>
+                                            <span class="post-info-following">Following</span>
+                                        </div>
+                                        <div class="following-container-post-time">
+                                            <span>14th october on 14:36 PM</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="following-container-post-caption">
+                                    <span>
+                                        Fire!!! Fire in my heart!
+                                    </span>
+                                </div>
+                                <img class="following-container-post-img" src="./assets/img/Post/p2.jpg" alt="">
+
+                                <div class="following-container-post-reaction">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span>450</span>
+                                    <i class="fa-regular fa-comment reaction-cmt-icon"></i>
+                                    <span>67</span> 
+                                </div>
+
+                            </div>
+
+                            <div class="following-container-post">
+                                <div class="following-container-post-heading">
+                                    <div class="following-container-post-avt" style="background-image: url(./assets/img/artist/ar3.jpg);"></div>
+                                    <div class="following-container-post-info">
+                                        <div class="post-info-title">
+                                            <span class="post-info-name">Shawn Mendes</span>
+                                            <i class="fa-solid fa-circle"></i>
+                                            <span class="post-info-following">Following</span>
+                                        </div>
+                                        <div class="following-container-post-time">
+                                            <span>14th october on 14:36 PM</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="following-container-post-caption">
+                                    <span>
+                                        I love you without knowing how, why or even from where</span>
+                                </div>
+                                <img class="following-container-post-img" src="./assets/img/Post/p12.jpg" alt="">
+
+                                <div class="following-container-post-reaction">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span>450</span>
+                                    <i class="fa-regular fa-comment reaction-cmt-icon"></i>
+                                    <span>67</span> 
+                                </div>
+
+                            </div>
+
+                            <div class="following-container-post">
+                                <div class="following-container-post-heading">
+                                    <div class="following-container-post-avt" style="background-image: url(./assets/img/artist/ar3.jpg);"></div>
+                                    <div class="following-container-post-info">
+                                        <div class="post-info-title">
+                                            <span class="post-info-name">Shawn Mendes</span>
+                                            <i class="fa-solid fa-circle"></i>
+                                            <span class="post-info-following">Following</span>
+                                        </div>
+                                        <div class="following-container-post-time">
+                                            <span>14th october on 14:36 PM</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="following-container-post-caption">
+                                    <span>
+                                        I love you without knowing how, why or even from where</span>
+                                </div>
+                                <img class="following-container-post-img" src="./assets/img/Post/p7.jpg" alt="">
+
+                                <div class="following-container-post-reaction">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span>450</span>
+                                    <i class="fa-regular fa-comment reaction-cmt-icon"></i>
+                                    <span>67</span> 
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="following-container-right col l-4">
+                            <div class="following-container-post">
+                                <div class="following-container-post-heading">
+                                    <div class="following-container-post-avt" style="background-image: url(./assets/img/artist/ar5\ \(2\).png);"></div>
+                                    <div class="following-container-post-info">
+                                        <div class="post-info-title">
+                                            <span class="post-info-name">Sabrina salvatierra</span>
+                                            <i class="fa-solid fa-circle"></i>
+                                            <span class="post-info-following">Following</span>
+                                        </div>
+                                        <div class="following-container-post-time">
+                                            <span>16th November on 8:36 AM</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="following-container-post-caption">
+                                    <span>
+                                        I’m excited to be the new brand ambassador for @davidyurman, and to be featured in their spring campaign,
+                                         Nature’s Artistry, celebrating nature and the creative inspiration it provides</span>
+                                </div>
+                                <img class="following-container-post-img" src="./assets/img/Post/p1.jpg" alt="">
+
+                                <div class="following-container-post-reaction">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span>450</span>
+                                    <i class="fa-regular fa-comment reaction-cmt-icon"></i>
+                                    <span>67</span> 
+                                </div>
+
+                            </div>
+
+                            
+
+                            <div class="following-container-post">
+                                <div class="following-container-post-heading">
+                                    <div class="following-container-post-avt" style="background-image: url(./assets/img/artist/ar3.jpg);"></div>
+                                    <div class="following-container-post-info">
+                                        <div class="post-info-title">
+                                            <span class="post-info-name">Shawn Mendes</span>
+                                            <i class="fa-solid fa-circle"></i>
+                                            <span class="post-info-following">Following</span>
+                                        </div>
+                                        <div class="following-container-post-time">
+                                            <span>14th october on 14:36 PM</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="following-container-post-caption">
+                                    <span>
+                                        Once I’m with you, nobody else matters</span>
+                                </div>
+                                <img class="following-container-post-img" src="./assets/img/Post/p6.jpg" alt="">
+
+                                <div class="following-container-post-reaction">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span>450</span>
+                                    <i class="fa-regular fa-comment reaction-cmt-icon"></i>
+                                    <span>67</span> 
+                                </div>
+
+                            </div>
+
+                            <div class="following-container-post">
+                                <div class="following-container-post-heading">
+                                    <div class="following-container-post-avt" style="background-image: url(./assets/img/artist/ar3.jpg);"></div>
+                                    <div class="following-container-post-info">
+                                        <div class="post-info-title">
+                                            <span class="post-info-name">Lea Elui G</span>
+                                            <i class="fa-solid fa-circle"></i>
+                                            <span class="post-info-following">Following</span>
+                                        </div>
+                                        <div class="following-container-post-time">
+                                            <span>14th october on 14:36 PM</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="following-container-post-caption">
+                                    <span>
+                                        I’m excited to be the new brand ambassador for @davidyurman, and to be featured in their spring campaign,
+                                         Nature’s Artistry, celebrating nature and the creative inspiration it provides</span>
+                                </div>
+                                <img class="following-container-post-img" src="./assets/img/Post/p5.jpg" alt="">
+
+                                <div class="following-container-post-reaction">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span>450</span>
+                                    <i class="fa-regular fa-comment reaction-cmt-icon"></i>
+                                    <span>67</span> 
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="music-player">
+            <div class="wide-50 music-player-block">
+                <div class="player-song">
+                    <div class="player-song-img song-active-img" style="background-image: url(./assets/img/songs/Fire_on_fire.jpg)"></div>
+                    <div class="player-song-info">
+                        <span class="player-song-info-title">Havana</span>
+                        <span class="player-song-info-author">Camila Cabello</span>
+                    </div>
+                </div>   
+                <div class="player-control">
+                    <div class="player-btn-control-btn">
+                        <i class="fa-solid fa-shuffle"></i>
+                        <i class="fa-solid fa-backward-step previous-song"></i>
+                        <div class="music-control-song hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <div class="music-control-song">
+                            <i class="fa-solid fa-pause"></i>
+                        </div>
+                        <i class="fa-solid fa-forward-step next-song"></i>
+                        <i class="fa-solid fa-repeat"></i>
+                    </div>
+                    <div class="player-control-progress">
+                        <span class="current-time">00:00</span>
+                        <input id="input-progress-song" type="range" min="0" max="100" value="0">
+                        <span class="total-time">00:00</span>
+                    </div>
+                </div>
+                <div class="player-option">
+                    <div class="player-option-container">
+                        <i class="fa-solid fa-video"></i>
+                        <i class="fa-solid fa-microphone"></i>
+                        <i class="fa-solid fa-volume-high " id="hight-volume"></i>
+                        <i class="fa-solid fa-volume-low hide" id="low-volume"></i>
+                        <i class="fa-solid fa-volume-xmark hide" id="mute-volume"></i>
+                        <input id="volume-range" type="range" min="0" max="100" value="0">
+                        <i class="fa-solid fa-list-check near-listened-song"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="friend-container">
+            <div class="friend-header">
+                <i id="exit-friend-container" class="fa-solid fa-chevron-right"></i>
+                <span>Friends activity </span>
+                <i id="add-friend-container" class="fa-solid fa-user-plus" ></i>
+            </div>
+            <div class="friend-content">
+                <ul class="friend-list">
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/ngọc_tram.jpg"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Ngoc Tram</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >Habits (Stay Hight)</span>
+                                <span class="friend-item-2thsong" >Tove Lo</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                Let's be still
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/kieu_oanh.png"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Kieu Oanh</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >How I Love You</span>
+                                <span class="friend-item-2thsong" >Fly Me To The Moon</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                My Love
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/thuy_duong.png"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Thuy Duong</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >Perfect (Ed Sheeran)</span>
+                                <span class="friend-item-2thsong" >Autumn leave</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                Love Song
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/huu_cuong.jpg"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Huu Cuong</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >Habits (Stay Hight)</span>
+                                <span class="friend-item-2thsong" >Tove Lo</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                Let's be still
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/minh_tu.jpg"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Minh Tu</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >Habits (Stay Hight)</span>
+                                <span class="friend-item-2thsong" >In The Dark (Adele)</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                Why Not Me
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/nhan.png"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Nhan Nguyen</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >Havana (Camila Cabello)</span>
+                                <span class="friend-item-2thsong" >One Call Away</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                In The Rain
+                            </div>
+                        </div>
+                    </li>
+
+                    
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/huu_manh.png"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Manh</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >We Dont Talk Anymore</span>
+                                <span class="friend-item-2thsong" >When I Was Your Man</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                Say Goodbye
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/thai_an.png"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Thai An</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >Milion Years</span>
+                                <span class="friend-item-2thsong" >Hold Me (Adele)</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                Love Is All I Have
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/manh_khanh.png"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Manh Khanh</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >Habits (Stay Hight)</span>
+                                <span class="friend-item-2thsong" >Tove Lo</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                Let's be still
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/huong_ngoc.jpg"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Huong Ngoc</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >The Day You Went Away</span>
+                                <span class="friend-item-2thsong" >Tove Lo</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                Let's be still
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/Coca.jpg"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >CoCa</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >Habits (Stay Hight)</span>
+                                <span class="friend-item-2thsong" >Tove Lo</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                Let's be still
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/thao_van.jpg"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Thao Van</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >Habits (Stay Hight)</span>
+                                <span class="friend-item-2thsong" >Hello (Adele)</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                Went Away
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="friend-item">
+                        <img src="./assets/img/friends/quoc_bao.jpg"  alt="" class="friend-item-img">
+                        <div class="friend-item-content">
+                            <div class="friend-item-header" >
+                                <span class="friend-item-name" >Quoc Bao</span>
+                                <i class="fa-solid fa-headphones friend-item-activity"></i>
+                            </div>
+                            <div class="friend-item-songs">
+                                <span class="friend-item-1thsong" >Habits (Stay Hight)</span>
+                                <span class="friend-item-2thsong" >Hello (Adele)</span>
+                            </div>
+                            <div class="friend-item-album">
+                                <i class="fa-solid fa-music"></i>
+                                Dont Forget
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/base.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
