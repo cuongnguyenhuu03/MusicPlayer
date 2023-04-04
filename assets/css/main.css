@@ -709,6 +709,7 @@
     color: var(--text-color);
     font-size: 1.4rem;
     background-color: var(--menu-color);
+    overflow: hidden;
     z-index: 110;
 }
 
@@ -1408,8 +1409,9 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-size: contain;
+    background-size: cover;
     margin-right: 12px;
+    background-repeat: no-repeat;
 }
 
 .following-container-post-heading {
@@ -1469,3 +1471,68 @@
     margin-left: 16px;
 }
 
+/* radio */
+
+.radio-trending-podcast {
+    padding: 20px 0 80px 0;
+    width: 100%;
+}
+
+.radio-trending-podcast-left,
+.radio-trending-podcast-right {
+}
+
+.radio-trending-podcast-wrap {
+    background-color: var(--item-hover-color);
+    border-radius: 15px;
+    padding: 18px 0;
+}
+
+.radio-trending-post {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.radio-trending-post-rank {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin: 4px
+}
+
+.radio-trending-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.radio-trending-info {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 90px);
+}
+
+.radio-trending-title {
+    width: 100%;
+    font-size: 1.4rem;
+    color: var(--text-color-main);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.radio-trending-content,
+.radio-trending-time {
+    color: #999;
+    width: 100%;
+    font-size: 1.1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.radio-trending-post:hover {
+    background-color: rgba(255, 255, 255, 0.12)
+}

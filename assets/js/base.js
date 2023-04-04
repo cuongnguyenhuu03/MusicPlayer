@@ -70,6 +70,8 @@ const menuItem = document.querySelectorAll(".main-menu-item")
 menuItem.forEach((item, index)=> {
     const fulltab = fulltabs[index]
     item.onclick = function (){
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         document.querySelector(".main-menu-item.active").classList.remove('active');
         document.querySelector(".container-content.active").classList.remove('active');
         fulltab.classList.add('active')
