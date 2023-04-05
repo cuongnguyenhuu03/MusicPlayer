@@ -122,7 +122,7 @@ const app = {
                     </div>
                     <div class="overal-content-songs-item-stt">
                         <span>${song.duratime}</span>
-                        <i class="fa-solid fa-microphone"></i>
+                        <i class="fa-solid fa-microphone hide-on-pcls"></i>
                         <i class="fa-solid fa-heart like-btn active"></i>
                     </div>
                 </li>

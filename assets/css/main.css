@@ -1401,13 +1401,16 @@
     margin-bottom: 40px;
 }
 
-
+.following-container {
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
 
 .following-container-left,
 .following-container-right,
 .following-container-mid
  {
-    padding-bottom: 30px;
+    
 } 
 
 .following-title-post {
@@ -1501,7 +1504,6 @@
 
 .radio-trending-podcast {
     padding: 20px 0 80px 0;
-    width: 100%;
 }
 
 .radio-trending-podcast-left,

@@ -17,7 +17,7 @@
 
     .logo {
         width: 36px;
-        margin: 20px 0;
+        margin: 17px 0;
     }
 
     .main-menu-list::after {
@@ -81,12 +81,72 @@
 
 /* mobile */
 @media (max-width: 740px) {
+    .hide-on-moblie {
+        display: none !important;
+    }
     
+    #container {
+        padding-left: 0;
+    }
+
+    .container-nav {
+        width: 100%;
+    }
+
+    .overal-content-songs-img {
+        display: none;
+    }
+
+    .overal-content-songs {
+        width: 100%;
+    }
+
+    .container-content-header-btn {
+        display: none;
+    }
 }
 
 /* tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
+    #container {
+        padding-left: 70px;
+    }
+    .container-nav {
+        width: calc(100% - 70px);
+    }
+
+    .content-header-btn-buy-vip,
+    .overal-content-songs-item-stt {
+        display: none;
+    }
+
+    .main-content-nav-item {
+        padding: 5px 24px;
+    }
     
+    .hide-on-tablet {
+        display: none !important;
+    }
+
+    .overal-content-songs {
+        padding-top: 20px;
+    }
+
+    .songs-heading-upload-btn {
+        display: none;
+    }
+
+    .main-content-nav {
+        padding-bottom: 50px;
+    }
+
+}
+
+/* > PC low resolution */
+@media (min-width: 1023px) and (max-width: 1239px) {
+    .overal-content-songs-item-stt span {
+        display: none;
+    }
 }
 
 /* pc */

@@ -423,11 +423,16 @@
 }
 
 /* Tablet - PC low resolution */
-/* @media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-pcls {
+        display: none;
+    }
+    
     .wide {
         width: 644px;
     }
-} */
+
+}
 
 /* > PC low resolution */
 @media (min-width: 1024px) and (max-width: 1239px) {
@@ -436,7 +441,7 @@
         margin-right: -12px;
     }
 
-.row.sm-gutter {
+    .row.sm-gutter {
         margin-left: -5px;
         margin-right: -5px;
     }
