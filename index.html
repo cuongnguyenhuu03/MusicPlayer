@@ -17,9 +17,10 @@
 </head>
 <body class="hide-scroll">
 
-    <div id="app">
+    <div id="app" class="hide-scroll">
         <div id="menu">
-            <div class="logo" style="background-image: url(./assets/img/logo/main-logo-1.svg) ;"></div>
+            <div class="logo hide-on-MT" style="background-image: url(./assets/img/logo/main-logo-1.svg) ;"></div>
+            <div class="logo hide-on-pc" style="background-image: url(./assets/img/logo/main-logo-2.svg) ;"></div>
             <div class="main-menu">
                 <ul class="main-menu-list">
                     <li class="main-menu-item hover active">
@@ -27,7 +28,7 @@
                         <span>Personal</span>
                     </li>
                     <li class="main-menu-item hover">
-                        <i class="fa-regular fa-circle-dot"></i>
+                        <i class="icon fa-solid fa-compact-disc app__sidebar-item-icon"></i>
                         <span>Discover</span>
                     </li>
                     <li class="main-menu-item hover">
@@ -74,21 +75,21 @@
     
                 <div class="menu-library">
                     <ul class="menu-library-list">
-                        <li class="menu-library-item">
-                            LIBRARY
-                            <i class="fa-solid fa-pen"></i>
+                        <li class="menu-library-item hide-on-MT">
+                            <span>LIBRARY</span>
+                            <i class="fa-solid fa-pen "></i>
                         </li>
                         <li class="menu-library-item">
-                            <i class="fa-solid fa-radio"></i>
-                            Songs
+                            <img src="./assets/img/icon/i1.svg" alt="">
+                            <span>Songs</span>
                         </li>
                         <li class="menu-library-item">
-                            <i class="fa-regular fa-rectangle-list"></i>
-                            Playlist
+                            <img src="./assets/img/icon/i2.svg" alt="">
+                            <span>Playlist</span>
                         </li>
                         <li class="menu-library-item">
-                            <i class="fa-regular fa-clock"></i>
-                            Recently
+                            <img src="./assets/img/icon/i3.svg" alt="">
+                            <span>Recently</span>
                         </li>
                     </ul>
                 </div>
@@ -106,12 +107,16 @@
                         </li>
                     </ul>
                 </div>
+                <div class="menu-create-playlist">
+                    <i class="fa-solid fa-plus hide-on-MT create-playlist-plus"></i>
+                    <span class="hide-on-MT">Create New Playlist</span>
+                    <div class="create-playlist-mt">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
             </div>
 
-            <div class="menu-create-playlist">
-                <i class="fa-solid fa-plus"></i>
-                <span>Create New Playlist</span>
-            </div>
+            
             
         </div>
 
