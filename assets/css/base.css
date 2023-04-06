@@ -11,6 +11,7 @@
 }
 
 * {
+
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -59,6 +60,7 @@ html {
     width: 5px;
 }
 
+.main-music-player-song-list:hover::-webkit-scrollbar-thumb, 
 .menu-nav:hover::-webkit-scrollbar-thumb,
 .display-scroll:hover::-webkit-scrollbar-thumb {
     background-color: var(--primary-color);
@@ -66,7 +68,6 @@ html {
   
 ::-webkit-scrollbar-thumb {
     /* background-color: var(--primary-color); */
-
     background-color: transparent;
     border-radius: 10px;
 }
@@ -214,3 +215,21 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
     margin-right: 3px;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color:  rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+}
+
+
+.logo.small-size {
+    width: 36px;
+    margin-left: 0;
+}
+

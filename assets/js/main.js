@@ -4,6 +4,7 @@ const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
 const playlist = $('.overal-content-songs-list');
+const mainlist = $('.main-music-player-song-list')
 const playlistImg = $('.overal-content-songs-img');
 
 const app = {
@@ -130,6 +131,7 @@ const app = {
         })
 
         playlist.innerHTML  = htmls.join('\n')
+        mainlist.innerHTML  = htmls.join('\n')
     },
     renderSongsImg: function() {
         const htmls = this.songs.map((song, index, arr) =>{

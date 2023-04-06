@@ -706,12 +706,11 @@
     bottom: 0;
     width: 260px;
     background-color: var(--menu-color);
-    z-index: 12;
+    z-index: 100000; 
     overflow-x: hidden;
     overflow-y: scroll;
     will-change: right;
     transition:   .5s ease ;
-    
 }
 
 .friend-header {
@@ -1566,4 +1565,108 @@
 
 .radio-trending-post:hover {
     background-color: rgba(255, 255, 255, 0.12)
+}
+
+/* main music player */
+
+.main-music-player {
+    position: fixed;
+    top: 100vh;
+    right: 0;
+    left: 0;
+    bottom: 90px;
+    /* background-color: var(--menu-color); */
+    background-color: var(--main-backgroup-color);
+    z-index: 19;
+    color: var(--text-color);
+    /* display: none; */
+    will-change: right;
+    transition:   .6s ease ;
+}
+
+.main-music-player-heading {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-music-player-heading-btn {
+    display: flex;
+    align-items: center;
+}
+
+.main-music-player-content {
+    height: calc(100vh - 160px);
+    display: flex;
+}
+
+.main-music-player-song-info {
+    width: 35%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-music-player-song-img-wrap {
+    margin-top: 20px;
+    width: 60%;
+}
+
+.main-music-player-song-info-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.main-music-player-song-img {
+    background-size: contain;
+    border-radius: 50%;
+    padding-top: 100%;
+}
+
+.main-music-player-song-name {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.main-music-player-song-follower,
+.main-music-player-song-singer {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.main-music-player-song-follower {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.main-music-player-song-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.main-music-player-song-container {
+    width: 65%;
+    margin-left: 20px;
+}
+
+.main-music-player-song-list {
+    width: 100%;
+    margin-top: 20px;
+    height: 460px;
+    overflow-y: scroll;
+}
+
+.main-music-player-song-title {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 20px 0 10px 0;
 }

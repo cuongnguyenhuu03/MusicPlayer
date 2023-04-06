@@ -26,12 +26,21 @@ document.getElementById("volume-range").oninput = function() {
 
 // friend activity
 
+
+
 document.getElementById("exit-friend-container").onclick = function(){
+    document.querySelector(".friend-container").style.right = "-260px"
+    document.querySelector('.overlay').style.display = "none"
+}
+
+document.querySelector('.overlay').onclick = function() {
+    this.style.display = "none"
     document.querySelector(".friend-container").style.right = "-260px"
 }
 
 document.getElementById("friend").onclick = function() {
     document.querySelector(".friend-container").style.right = "0"
+    document.querySelector('.overlay').style.display = "block"
 }
 
 
@@ -78,3 +87,14 @@ menuItem.forEach((item, index)=> {
         this.classList.add('active')
     }
 })
+
+// main player
+
+const exitplayer = document.getElementById('exit-main-player');
+exitplayer.onclick = function() {
+    document.querySelector('.main-music-player ').style.top = ('100vh')
+}
+
+document.querySelector('.music-player').onclick =function() {
+    document.querySelector('.main-music-player ').style.top = ('0')
+}
