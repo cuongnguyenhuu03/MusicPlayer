@@ -1,9 +1,6 @@
 // hander header
-const $1 = document.querySelector.bind(document)
-const $$1 = document.querySelectorAll.bind(document)
 
-const nav_header = $1(".container-nav")
-console.log(nav_header)
+const nav_header = document.querySelector(".container-nav")
 
 document.onscroll = function() {
     const scrollTop = window.scrollY || document.documentElement.scrollTop
@@ -98,3 +95,39 @@ exitplayer.onclick = function() {
 document.querySelector('.music-player').onclick =function() {
     document.querySelector('.main-music-player ').style.top = ('0')
 }
+
+// animation song img 
+
+
+var i = 0
+
+
+setInterval(function(){
+    const listimg = document.querySelectorAll('.img-item')
+    var l = listimg.length;
+
+    listimg[i].classList.replace('first-img', 'fourth-img')
+    i++;
+    if(i <= l-3){
+        
+        listimg[i].classList.replace('second-img', 'first-img')
+        listimg[i+1].classList.replace('third-img', 'second-img')
+        listimg[i+2].classList.replace('fourth-img','third-img')
+    }
+    else if(i === l-2){
+        listimg[i].classList.replace('second-img', 'first-img')
+        listimg[i+1].classList.replace('third-img', 'second-img')
+        listimg[0].classList.replace('fourth-img','third-img')
+    }
+    else if(i === l-1){
+        listimg[i].classList.replace('second-img', 'first-img')
+        listimg[0].classList.replace('third-img', 'second-img')
+        listimg[1].classList.replace('fourth-img','third-img')
+    }
+    else if(i === l){
+        listimg[0].classList.replace('second-img', 'first-img')
+        listimg[1].classList.replace('third-img', 'second-img')
+        listimg[2].classList.replace('fourth-img','third-img')
+        i = 0;
+    }
+},3000)

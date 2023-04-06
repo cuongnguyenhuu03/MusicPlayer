@@ -124,6 +124,7 @@ html {
 
 /* revolve active song img  */
 
+.main-music-player-song-img,
 .song-active-img {
     animation: rotate-animation 8s linear infinite;
 }
@@ -163,48 +164,39 @@ input[type="range"]::-webkit-slider-thumb {
     margin-bottom: 50px;
 }
 
-.overal-content-songs-img-1st-img {
+.img-item {
     position: absolute;
-    width: 232px;
-    height: 232px;
+    width: 120px;
+    height: 120px;
     background-size: contain;
     border-radius: 10px;
-    z-index: 5;
     background-repeat: no-repeat;
-    margin-left: 60px;
+    transition:all 1s;
+    will-change: scale, translate;
 }
 
-.overal-content-songs-img-2nd-img {
-    z-index: 4;
-    height: 200px;
-    width: 200px;
-    border-radius: 10px;
-    position: absolute;
-    left: 40px;
+.first-img {
+    opacity: 1;
+    z-index: 5;
+    transform: scale(1.8, 1.9) translate(60px, 0);
+}
+
+.second-img {
     opacity: 0.8;
-    background-size: contain;
+    z-index: 4; 
+    transform: scale(1.5, 1.6) translate(45px, 0);
 }
 
-.overal-content-songs-img-3rd-img {
-    z-index: 3;
-    height: 164px;
-    width: 164px;
-    border-radius: 10px;
-    position: absolute;
-    left: 22px;
+.third-img {
     opacity: 0.6;
-    background-size: contain;
+    z-index: 3;
+    transform: scale(1.3, 1.4) translate(30px, 0);
 }
 
-.overal-content-songs-img-4th-img {
+.fourth-img {
     z-index: 2;
-    height: 140px;
-    width: 140px;
-    border-radius: 10px;
-    position: absolute;
-    left: 4px;
     opacity: 0;
-    background-size: contain;
+    transition:all 1s ease-in;
 }
 
 .padding-top-100 {

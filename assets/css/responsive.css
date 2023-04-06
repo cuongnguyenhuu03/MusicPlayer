@@ -136,6 +136,11 @@
         transform: translateY(-3px);
     }
 
+    .songs-heading-playall-btn,
+    .main-music-player-song-follower,
+    .main-music-player-song-container,
+    .zingchart-item-note,
+    .player-option-container,
     .zingchart-rank-status-up,
     .zingchart-rank-status-down,
     .zingchart-rank-status-new,
@@ -158,11 +163,6 @@
     .player-song-img {
         height: 40px;
         width: 40px;
-    }
-
-    .zingchart-item-note,
-    .player-option-container {
-        display: none;
     }
 
     .player-song,
@@ -213,6 +213,54 @@
 
     .radio-trending-podcast-left {
         margin-bottom: 20px;
+    }
+
+    .main-music-player-song-info {
+        width: 100%;
+    }
+
+    .main-music-player-song-img-wrap {
+        padding-top: 10px;
+        width: 70%;
+    }
+
+    .main-music-player-song-info-wrap {
+        width: 90%;
+    }
+
+    .player-control.main-player-control-btn{
+        width: 100%;
+    }
+
+    .player-btn-control-btn.main-player-control-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .player-control-progress.main-player-control-btn {
+        margin: 30px 0 20px 0;
+    } 
+
+    .main-music-player {
+        height: 100vh;
+        bottom: 0;
+        z-index: 100000000;
+    }
+    .main-music-player-song-btn {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .container-nav-btn-item.main-player-control-btn {
+        margin: 0;
+    }
+
+    .main-music-player-song-btn {
+        margin-top: 30px;
+    }
+
+    .main-music-player-content {
+        height: 100%;
     }
 }
 

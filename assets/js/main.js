@@ -137,30 +137,28 @@ const app = {
         const htmls = this.songs.map((song, index, arr) =>{
             if(index === 0) {
                 return `
-                <div class="overal-content-songs-img-1st-img" style="background-image: 
+                <div class="img-item first-img" style="background-image: 
                 url(${song.pic})"></div>
                 `
             }
             else if(index === 1) {
                 return `
-                <div class="overal-content-songs-img-2nd-img" style="background-image: 
+                <div class="img-item second-img" style="background-image: 
                 url(${song.pic})"></div>
                 `
             }
             else if(index === 2) {
                 return `
-                <div class="overal-content-songs-img-3rd-img" style="background-image: 
+                <div class="img-item third-img" style="background-image: 
                 url(${song.pic})"></div>
                 `
             }
-            else if (index === 3){
+            else {
                 return `
-                <div class="overal-content-songs-img-4th-img" style="background-image: 
+                <div class="img-item fourth-img" style="background-image: 
                 url(${song.pic})"></div>
                 `
             }
-            
-            
         })
         playlistImg.innerHTML = htmls.join('\n')
     },
