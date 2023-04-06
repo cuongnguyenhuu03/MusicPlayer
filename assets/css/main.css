@@ -701,14 +701,16 @@
 .friend-container {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -260px;
+    /* left: 100vw; */
     bottom: 0;
-    width: 0px;
+    width: 260px;
     background-color: var(--menu-color);
     z-index: 12;
     overflow-x: hidden;
     overflow-y: scroll;
-    transition: .5s;
+    will-change: right;
+    transition:   .5s ease ;
     
 }
 

@@ -27,11 +27,11 @@ document.getElementById("volume-range").oninput = function() {
 // friend activity
 
 document.getElementById("exit-friend-container").onclick = function(){
-    document.querySelector(".friend-container").style.width = "0"
+    document.querySelector(".friend-container").style.right = "-260px"
 }
 
 document.getElementById("friend").onclick = function() {
-    document.querySelector(".friend-container").style.width = "260px"
+    document.querySelector(".friend-container").style.right = "0"
 }
 
 

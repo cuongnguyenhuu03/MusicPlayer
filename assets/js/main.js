@@ -121,8 +121,8 @@ const app = {
                         <span class="overal-content-songs-item-author">${song.author}</span>
                     </div>
                     <div class="overal-content-songs-item-stt">
-                        <span>${song.duratime}</span>
-                        <i class="fa-solid fa-microphone hide-on-pcls"></i>
+                        <span class="hide-on-moblie">${song.duratime}</span>
+                        <i class="fa-solid fa-microphone hide-on-pcls hide-on-moblie"></i>
                         <i class="fa-solid fa-heart like-btn active"></i>
                     </div>
                 </li>

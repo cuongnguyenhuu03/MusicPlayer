@@ -77,6 +77,8 @@
         display: none;
     }
 
+
+
 }
 
 /* mobile */
@@ -103,6 +105,114 @@
 
     .container-content-header-btn {
         display: none;
+    }
+
+    #menu {
+        padding: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: auto;
+        height: 50px;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .main-menu-list {
+        display: flex;
+    }
+
+    .main-menu-item {
+        width: 20%;
+        border: none !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-menu-item i {
+        padding: 0;
+        margin: 0;
+        transform: translateY(-3px);
+    }
+
+    .zingchart-rank-status-up,
+    .zingchart-rank-status-down,
+    .zingchart-rank-status-new,
+    .main-menu-list::after,
+    .menu-nav {
+        display: none;
+    }
+
+    .music-player {
+        bottom: 50px;
+        right: 0;
+        left: 0;
+        height: 50px;
+    }
+
+    .music-player-block {
+        height: 100%;
+    }
+
+    .player-song-img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .zingchart-item-note,
+    .player-option-container {
+        display: none;
+    }
+
+    .player-song,
+    .zingchart-item-header {
+        width: auto;
+    }
+
+    .music-control-song,
+    .music-control-song {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .wide-50 {
+        margin: 0 20px;
+    }
+
+    .main-content-nav-item {
+        padding: 5px 18px;
+    }
+
+    .songs-heading-playall-btn {
+        padding: 5px 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .overal-content-songs-block {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .player-btn-control-btn {
+        display: flex;
+        justify-content: end;
+    }
+
+    .content-header-user-name {
+        font-size: 2.2rem;
+        margin-top: 24px;
+    }
+
+    .main-content-nav {
+        padding-top: 90px;
+    }
+
+    .radio-trending-podcast {
+        flex-wrap: wrap;
+    }
+
+    .radio-trending-podcast-left {
+        margin-bottom: 20px;
     }
 }
 
