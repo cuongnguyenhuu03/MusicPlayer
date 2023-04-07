@@ -597,6 +597,11 @@
     background-size: contain;
 }
 
+.player-btn-control-btn div,
+.player-btn-control-btn i {
+    cursor: pointer;
+}
+
 .player-song {
     display: flex;
     align-items: center;
@@ -655,7 +660,7 @@
     /* width: 560px; */
 }
 
-#input-progress-song {
+/* #input-progress-song {
     background: linear-gradient(to right,#7200a1  0%,#7200a1  0%, #9c9a9a 0%, #9c9a9a 100%);
     flex: 1;
     margin: 2px 14px;
@@ -664,7 +669,7 @@
     border-radius: 5px;
     border: none;
     outline: none;
-}
+} */
 
 /* player option */
 
@@ -679,17 +684,6 @@
     width: 100%;
     height: 90px;
     color: var(--text-color);
-}
-
-#volume-range {
-    background: linear-gradient(to right,#7200a1  0%,#7200a1  0%, #9c9a9a 0%, #9c9a9a 100%);
-    display: block;
-    height: 4px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    width: 100px;
-    margin-left: 18px;
 }
 
 .player-option-container i {
@@ -1672,3 +1666,91 @@
     font-weight: 600;
     padding: 20px 0 10px 0;
 }
+
+.input-progress-wrap {
+    width: 100%;
+    background-color: #b6b4b4;
+    height: 4px;
+    margin: 0 20px;
+    position: relative;
+    border-radius: 4px;
+}
+
+
+#input-progress-song {
+    position: absolute;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    top:0;
+    left: 0;
+    border-radius: 4px;
+    z-index: 6;
+    background-color: transparent;
+
+}
+
+#input-progress-song::-webkit-slider-thumb  {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: #712393;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.input-progress-range {
+    position: absolute;
+    -webkit-appearance: none;
+    height: 4px;
+    background-color:  #712393;
+    top:0;
+    left: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.player-option-range-wrap {
+    position: relative;
+    background-color: #b6b4b4;
+    border-radius: 5px;
+    width: 100px;
+    height: 4px;
+    margin: 0 10px;
+}
+
+#volume-range {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background-color: #b6b4b4;
+    border-radius: 5px;
+}
+
+#volume-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: #712393;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.player-option-range {
+    position: absolute;
+    background-color:  #712393;
+    height: 4px;
+    top:0;
+    left: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+
+

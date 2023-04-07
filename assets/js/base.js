@@ -7,28 +7,7 @@ document.onscroll = function() {
     scrollTop > 20 ? nav_header.classList.add("scroll-effect") : nav_header.classList.remove("scroll-effect")
 }
 
-// hander music-progress
-
-document.getElementById("input-progress-song").oninput = function() {
-    var value = (this.value-this.min)/(this.max-this.min)*100
-    this.style.background = 'linear-gradient(to right, #7200a1 0%, #7200a1 ' + value + '%, #9c9a9a ' + value + '%, #9c9a9a 100%)'
-};
-
-
-// var progressCurrent =  document.getElementById("input-progress-song")
-// var value = (progressCurrent.value-progressCurrent.min)/(progressCurrent.max-progressCurrent.min)*100
-// progressCurrent.style.background = 'linear-gradient(to right, #7200a1 0%, #7200a1 ' + value + '%, #9c9a9a ' + value + '%, #9c9a9a 100%)'
-
-// hander range volume 
-
-document.getElementById("volume-range").oninput = function() {
-    var value = (this.value-this.min)/(this.max-this.min)*100
-    this.style.background = 'linear-gradient(to right, #7200a1 0%, #7200a1 ' + value + '%, #9c9a9a ' + value + '%, #9c9a9a 100%)'
-};
-
 // friend activity
-
-
 
 document.getElementById("exit-friend-container").onclick = function(){
     document.querySelector(".friend-container").style.right = "-260px"
@@ -44,7 +23,6 @@ document.getElementById("friend").onclick = function() {
     document.querySelector(".friend-container").style.right = "0"
     document.querySelector('.overlay').style.display = "block"
 }
-
 
 //  overal render 
 
@@ -141,5 +119,9 @@ setInterval(function(){
 // stop Propagation in control btn 
 
 document.querySelector('.player-control').onclick = function(e) {
+    e.stopPropagation()
+}
+
+document.querySelector('#volume-range').onclick = function(e) {
     e.stopPropagation()
 }

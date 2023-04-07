@@ -16,12 +16,37 @@ const pausebtn = $('.pause-btn-control');
 const currentTime = $('.current-time');
 const duration = $('.duration');
 const progress = $('#input-progress-song');
+const nextSong = $('.next-song');
+const prevSong = $('.previous-song');
+const songRange = $('.input-progress-range')
 
-console.log(progress)
 
+var imgAnimation = [
+    {
+        transform: 'rotate(0)'
+    },
+    {
+        transform: 'rotate(180deg)'
+    },
+    {
+        transform: 'rotate(360deg)'
+    }
+]
+
+const animations = imgPlayer.animate(imgAnimation, {
+    duration: 7000,
+    iterations: Infinity
+})
+const animationsMainImg = imgMainPlayer.animate(imgAnimation, {
+    duration: 7000,
+    iterations: Infinity
+})
+animations.pause();
+animationsMainImg.pause();
 
 const app = {
     currentIndex: 0,
+    isPlaying: false,
     songs : [
         {
             audio: './assets/audio/To_The_Moon.mp3',
@@ -131,50 +156,6 @@ const app = {
         })
     },
 
-    handleEvent: function() {
-        // handle when click play button
-        playbtn.onclick = function(e) {
-            e.stopPropagation()
-            // play
-            audio.play()
-            // change btn
-            playbtn.classList.add('hide')
-            pausebtn.classList.remove('hide')
-
-            imgPlayer.classList.add('active')    
-            imgMainPlayer.classList.add('active')
-        }
-
-        //handle when click pause button
-        pausebtn.onclick = function(e) {
-            e.stopPropagation()
-            // pause
-            audio.pause()
-            // change btn
-            pausebtn.classList.add('hide')
-            playbtn.classList.remove('hide')
-
-            imgPlayer.classList.remove('active')    
-            imgMainPlayer.classList.remove('active')
-        }
-
-        // when progress of song change
-
-        audio.ontimeupdate = function() {
-            if(!audio.duration){      //first value of duration is NaN 
-                const progressPercent = 0
-                progress.value = progressPercent 
-            }
-            else {
-                const progressPercent = audio.currentTime / audio.duration * 100
-                progress.value = progressPercent 
-                progress.style.background = 'linear-gradient(to right, #7200a1 0%, #7200a1 ' + progressPercent  + '%, #9c9a9a ' + progressPercent  + '%, #9c9a9a 100%)'
-            }
-        }
-
-
-    },
-
     renderSongs: function() {
         const htmls = this.songs.map(song => {
             return `
@@ -241,6 +222,98 @@ const app = {
         imgMainPlayer.style.backgroundImage = `url(${this.currentSong.pic})`
 
         audio.src = this.currentSong.audio
+        progress.value = 0
+
+    },
+
+    handleEvent: function() {
+        const _this = this
+
+        // handle when click play button
+        playbtn.onclick = function(e) {
+            e.stopPropagation()
+            audio.play()  
+        }
+
+        //handle when click pause button
+        pausebtn.onclick = function(e) {
+            e.stopPropagation()
+            audio.pause()
+        }
+
+        audio.onplay = function() {
+            playbtn.classList.add('hide')
+            pausebtn.classList.remove('hide')
+
+            animations.play()
+            animationsMainImg.play();
+        }
+
+        audio.onpause = function() {
+            pausebtn.classList.add('hide')
+            playbtn.classList.remove('hide')
+
+            animations.pause();
+            animationsMainImg.pause();
+        }
+
+        // when progress of song change
+
+        audio.ontimeupdate = function() {
+            // progress bar 
+
+            if(!audio.duration){      //first value of duration is NaN 
+                const progressPercent = 0
+                progress.value = progressPercent 
+                songRange.style.width = '0'
+            }
+            else {
+                const progressPercent = audio.currentTime / audio.duration * 100
+                songRange.style.width = progressPercent + '%' 
+                progress.value = progressPercent 
+            }
+        }
+
+        // handle change value of progress bar 
+        progress.onchange = function() {
+            var timeChange = audio.duration * this.value /100;
+            audio.currentTime = timeChange
+        }  
+        // 
+        progress.oninput = function() {
+            songRange.style.width = this.value + '%'
+        }  
+
+        // handle next/prev song 
+
+        nextSong.onclick = function() {
+            _this.playNextSong()
+            audio.play()
+        }
+        prevSong.onclick = function() {
+            console.log(9)
+            _this.playPrevSong()
+            audio.play()
+        }
+        
+        
+    },
+
+    // handle next/previous song 
+    playNextSong : function() {
+        this.currentIndex++
+        if(this.currentIndex === this.songs.length){
+            this.currentIndex = 0;
+        }
+        this.renderCurentSong();          
+    },
+
+    playPrevSong : function() {
+        this.currentIndex--
+        if(this.currentIndex < 0){
+            this.currentIndex = this.songs.length - 1;
+        }
+        this.renderCurentSong();          
     },
 
     start : function() {
@@ -253,3 +326,4 @@ const app = {
 }
 
 app.start();
+
