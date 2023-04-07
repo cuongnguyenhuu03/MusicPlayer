@@ -14,6 +14,11 @@ document.getElementById("input-progress-song").oninput = function() {
     this.style.background = 'linear-gradient(to right, #7200a1 0%, #7200a1 ' + value + '%, #9c9a9a ' + value + '%, #9c9a9a 100%)'
 };
 
+
+// var progressCurrent =  document.getElementById("input-progress-song")
+// var value = (progressCurrent.value-progressCurrent.min)/(progressCurrent.max-progressCurrent.min)*100
+// progressCurrent.style.background = 'linear-gradient(to right, #7200a1 0%, #7200a1 ' + value + '%, #9c9a9a ' + value + '%, #9c9a9a 100%)'
+
 // hander range volume 
 
 document.getElementById("volume-range").oninput = function() {
@@ -131,3 +136,10 @@ setInterval(function(){
         i = 0;
     }
 },3000)
+
+
+// stop Propagation in control btn 
+
+document.querySelector('.player-control').onclick = function(e) {
+    e.stopPropagation()
+}

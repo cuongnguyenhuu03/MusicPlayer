@@ -235,6 +235,7 @@
     .player-btn-control-btn.main-player-control-btn {
         display: flex;
         justify-content: center;
+        padding-bottom: 50px;
     }
 
     .player-control-progress.main-player-control-btn {

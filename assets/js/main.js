@@ -1,13 +1,27 @@
-
-
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
 const playlist = $('.overal-content-songs-list');
 const mainlist = $('.main-music-player-song-list')
 const playlistImg = $('.overal-content-songs-img');
+const imgPlayer = $('.player-song-img');
+const imgMainPlayer = $('.main-music-player-song-img');
+const namecurrentsong = $('.player-song-info-title');
+const authorcurrentsong = $('.player-song-info-author');
+const mainNameCurrentsong = $('.main-music-player-song-name');
+const mainAuthorcurrentsong = $('.main-music-player-song-singer');
+const audio = $('#audio');
+const playbtn = $('.play-btn-control');
+const pausebtn = $('.pause-btn-control');
+const currentTime = $('.current-time');
+const duration = $('.duration');
+const progress = $('#input-progress-song');
+
+console.log(progress)
+
 
 const app = {
+    currentIndex: 0,
     songs : [
         {
             audio: './assets/audio/To_The_Moon.mp3',
@@ -108,6 +122,59 @@ const app = {
             duratime: '04:45'
         }
     ],
+
+    definePropertys: function() {
+        Object.defineProperty(this, "currentSong", {
+            get: function(){
+                return this.songs[this.currentIndex]
+            }
+        })
+    },
+
+    handleEvent: function() {
+        // handle when click play button
+        playbtn.onclick = function(e) {
+            e.stopPropagation()
+            // play
+            audio.play()
+            // change btn
+            playbtn.classList.add('hide')
+            pausebtn.classList.remove('hide')
+
+            imgPlayer.classList.add('active')    
+            imgMainPlayer.classList.add('active')
+        }
+
+        //handle when click pause button
+        pausebtn.onclick = function(e) {
+            e.stopPropagation()
+            // pause
+            audio.pause()
+            // change btn
+            pausebtn.classList.add('hide')
+            playbtn.classList.remove('hide')
+
+            imgPlayer.classList.remove('active')    
+            imgMainPlayer.classList.remove('active')
+        }
+
+        // when progress of song change
+
+        audio.ontimeupdate = function() {
+            if(!audio.duration){      //first value of duration is NaN 
+                const progressPercent = 0
+                progress.value = progressPercent 
+            }
+            else {
+                const progressPercent = audio.currentTime / audio.duration * 100
+                progress.value = progressPercent 
+                progress.style.background = 'linear-gradient(to right, #7200a1 0%, #7200a1 ' + progressPercent  + '%, #9c9a9a ' + progressPercent  + '%, #9c9a9a 100%)'
+            }
+        }
+
+
+    },
+
     renderSongs: function() {
         const htmls = this.songs.map(song => {
             return `
@@ -133,6 +200,7 @@ const app = {
         playlist.innerHTML  = htmls.join('\n')
         mainlist.innerHTML  = htmls.join('\n')
     },
+
     renderSongsImg: function() {
         const htmls = this.songs.map((song, index, arr) =>{
             if(index === 0) {
@@ -162,9 +230,25 @@ const app = {
         })
         playlistImg.innerHTML = htmls.join('\n')
     },
+
+    renderCurentSong: function() {
+        namecurrentsong.textContent = this.currentSong.title
+        imgPlayer.style.backgroundImage = `url(${this.currentSong.pic})`
+        authorcurrentsong.textContent = this.currentSong.author
+
+        mainNameCurrentsong.textContent = this.currentSong.title
+        mainAuthorcurrentsong.textContent = this.currentSong.author
+        imgMainPlayer.style.backgroundImage = `url(${this.currentSong.pic})`
+
+        audio.src = this.currentSong.audio
+    },
+
     start : function() {
+        this.definePropertys()
+        this.handleEvent()
         this.renderSongs()
         this.renderSongsImg()
+        this.renderCurentSong()
     }
 }
 

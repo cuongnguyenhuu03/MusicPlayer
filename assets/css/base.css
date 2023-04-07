@@ -124,8 +124,8 @@ html {
 
 /* revolve active song img  */
 
-.main-music-player-song-img,
-.song-active-img {
+.main-music-player-song-img.active,
+.player-song-img.active {
     animation: rotate-animation 8s linear infinite;
 }
 
