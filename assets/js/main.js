@@ -278,10 +278,26 @@ const app = {
         progress.onchange = function() {
             var timeChange = audio.duration * this.value /100;
             audio.currentTime = timeChange
+
+            audio.ontimeupdate = function() {
+                // progress bar 
+    
+                if(!audio.duration){      //first value of duration is NaN 
+                    const progressPercent = 0
+                    progress.value = progressPercent 
+                    songRange.style.width = '0'
+                }
+                else {
+                    const progressPercent = audio.currentTime / audio.duration * 100
+                    songRange.style.width = progressPercent + '%' 
+                    progress.value = progressPercent 
+                }
+            }
         }  
         // 
         progress.oninput = function() {
             songRange.style.width = this.value + '%'
+            audio.ontimeupdate = function() {}
         }  
 
         // handle next/prev song 
@@ -295,8 +311,10 @@ const app = {
             _this.playPrevSong()
             audio.play()
         }
-        
-        
+
+        audio.onended = function() {
+            nextSong.click()
+        }     
     },
 
     // handle next/previous song 
