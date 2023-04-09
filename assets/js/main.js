@@ -4,22 +4,24 @@ const $$ = document.querySelectorAll.bind(document)
 const playlist = $('.overal-content-songs-list');
 const mainlist = $('.main-music-player-song-list')
 const playlistImg = $('.overal-content-songs-img');
-const imgPlayer = $('.player-song-img');
+const imgPlayer= $('.player-song-img');
 const imgMainPlayer = $('.main-music-player-song-img');
 const namecurrentsong = $('.player-song-info-title');
 const authorcurrentsong = $('.player-song-info-author');
 const mainNameCurrentsong = $('.main-music-player-song-name');
 const mainAuthorcurrentsong = $('.main-music-player-song-singer');
 const audio = $('#audio');
-const playbtn = $('.play-btn-control');
-const pausebtn = $('.pause-btn-control');
+const playbtns = $$('.play-btn-control');
+const pausebtns = $$('.pause-btn-control');
 const currentTime = $('.current-time');
 const duration = $('.duration');
-const progress = $('#input-progress-song');
-const nextSong = $('.next-song');
-const prevSong = $('.previous-song');
-const songRange = $('.input-progress-range')
+const progresses = $$('#input-progress-song');
+const nextSongs = $$('.next-song');
+const prevSongs = $$('.previous-song');
+const songRanges = $$('.input-progress-range')
 
+
+console.log(progresses)
 
 var imgAnimation = [
     {
@@ -34,9 +36,12 @@ var imgAnimation = [
 ]
 
 const animations = imgPlayer.animate(imgAnimation, {
-    duration: 7000,
-    iterations: Infinity
+        duration: 7000,
+        iterations: Infinity
 })
+
+// console.log(animations)
+
 const animationsMainImg = imgMainPlayer.animate(imgAnimation, {
     duration: 7000,
     iterations: Infinity
@@ -222,37 +227,50 @@ const app = {
         imgMainPlayer.style.backgroundImage = `url(${this.currentSong.pic})`
 
         audio.src = this.currentSong.audio
-        progress.value = 0
-
+        progresses.forEach((progress)=>{
+            progress.value = 0
+        })
     },
 
     handleEvent: function() {
         const _this = this
 
-        // handle when click play button
-        playbtn.onclick = function(e) {
+        playbtns.forEach((playbtn, index) => {
+            playbtn.onclick = function(e) {
             e.stopPropagation()
             audio.play()  
         }
+        });
 
-        //handle when click pause button
-        pausebtn.onclick = function(e) {
+        pausebtns.forEach((pausebtn, index)=> {
+            pausebtn.onclick = function(e) {
+            console.log(123)
+            
             e.stopPropagation()
             audio.pause()
-        }
+            }
+        })
 
         audio.onplay = function() {
-            playbtn.classList.add('hide')
-            pausebtn.classList.remove('hide')
+            playbtns.forEach((playbtn,index)=> {
+                playbtn.classList.add('hide')
+            })
 
+            pausebtns.forEach((pausebtn, index)=>{
+                pausebtn.classList.remove('hide')
+            })
             animations.play()
             animationsMainImg.play();
         }
 
         audio.onpause = function() {
-            pausebtn.classList.add('hide')
-            playbtn.classList.remove('hide')
+            playbtns.forEach((playbtn,index)=> {
+                playbtn.classList.remove('hide')
+            })
 
+            pausebtns.forEach((pausebtn, index)=>{
+                pausebtn.classList.add('hide')
+            })
             animations.pause();
             animationsMainImg.pause();
         }
@@ -264,56 +282,86 @@ const app = {
 
             if(!audio.duration){      //first value of duration is NaN 
                 const progressPercent = 0
-                progress.value = progressPercent 
-                songRange.style.width = '0'
+                progresses.forEach((progress) => {
+                    progress.value = progressPercent 
+                })
+
+                songRanges.forEach((songRange,index)=> {
+                    songRange.style.width = '0'
+                })
             }
             else {
                 const progressPercent = audio.currentTime / audio.duration * 100
-                songRange.style.width = progressPercent + '%' 
-                progress.value = progressPercent 
+                songRanges.forEach((songRange,index)=> {
+                    songRange.style.width = progressPercent + '%' 
+                })
+                progresses.forEach((progress) => {
+                    progress.value = progressPercent 
+                })
             }
         }
 
         // handle change value of progress bar 
-        progress.onchange = function() {
-            var timeChange = audio.duration * this.value /100;
-            audio.currentTime = timeChange
-
-            audio.ontimeupdate = function() {
-                // progress bar 
-    
-                if(!audio.duration){      //first value of duration is NaN 
-                    const progressPercent = 0
-                    progress.value = progressPercent 
-                    songRange.style.width = '0'
-                }
-                else {
-                    const progressPercent = audio.currentTime / audio.duration * 100
-                    songRange.style.width = progressPercent + '%' 
-                    progress.value = progressPercent 
+        progresses.forEach((progress)=>{
+            progress.onchange = function() {
+                var timeChange = audio.duration * this.value /100;
+                audio.currentTime = timeChange
+                audio.play()
+                audio.ontimeupdate = function() {
+                    // progress bar 
+        
+                    if(!audio.duration){      //first value of duration is NaN 
+                        const progressPercent = 0
+                        progresses.forEach((progress) => {
+                            progress.value = progressPercent 
+                        })
+                        songRanges.forEach((songRange,index)=> {
+                            songRange.style.width = '0'
+                        }) 
+                    }
+                    else {
+                        const progressPercent = audio.currentTime / audio.duration * 100
+                        songRanges.forEach((songRange,index)=> {
+                            songRange.style.width = progressPercent + '%' 
+                        }) 
+                        progresses.forEach((progress) => {
+                            progress.value = progressPercent 
+                        })
+                    }
                 }
             }
-        }  
+        })
         // 
-        progress.oninput = function() {
-            songRange.style.width = this.value + '%'
-            audio.ontimeupdate = function() {}
-        }  
+        progresses.forEach((progress)=>{
+            progress.oninput = function() {
+                songRanges.forEach((songRange,index)=> {
+                    songRange.style.width = this.value + '%' 
+                })
+                audio.ontimeupdate = function() {}
+            }  
+        })
 
         // handle next/prev song 
 
-        nextSong.onclick = function() {
-            _this.playNextSong()
-            audio.play()
-        }
-        prevSong.onclick = function() {
-            console.log(9)
-            _this.playPrevSong()
-            audio.play()
-        }
+        nextSongs.forEach((nextSong, index)=> {
+            nextSong.onclick = function() {
+                _this.playNextSong()
+                audio.play()
+            }
+        })
+
+        prevSongs.forEach((prevSong, index)=>{
+            prevSong.onclick = function() {
+                console.log(9)
+                _this.playPrevSong()
+                audio.play()
+            }
+        })
 
         audio.onended = function() {
-            nextSong.click()
+            nextSongs.forEach(nextsong => {
+                nextsong.click()
+            })
         }     
     },
 

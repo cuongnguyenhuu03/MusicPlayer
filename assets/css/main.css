@@ -587,6 +587,7 @@
 .player-song {
     color: var(--text-color);
     width: 30%;
+    cursor: pointer;
 }
 
 .player-song-img {
@@ -1751,6 +1752,18 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     cursor: pointer;
+}
+
+.player-control.on-main {
+    width: 90%;
+}
+
+.player-btn-control-btn.on-main {
+    justify-content: center;
+}
+
+.player-control-progress.on-main {
+    margin: 16px 0;
 }
 
 

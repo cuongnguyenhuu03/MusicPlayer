@@ -2704,7 +2704,9 @@
                     <div class="main-music-player-song-img-wrap">
                         <div class="main-music-player-song-img" style="background-image: url(./assets/img/songs/Fire_on_fire.jpg);"></div>
                     </div>
-
+                    <div class="main-music-player-song-info-content">
+                        
+                    </div>
                     <div class="main-music-player-song-info-wrap">
                         <span class="main-music-player-song-name">Love You Like A Love Song</span>
                         <span class="main-music-player-song-singer">Sam Smith</span>
@@ -2713,13 +2715,37 @@
                             <i class="fa-solid fa-star"></i>
                             Following
                         </div>
-                        <div class="main-music-player-song-btn"> 
+                        <div class="main-music-player-song-btn hide-on-moblie"> 
                             <div class="container-nav-btn-item main-player-control-btn">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
                             <div class="container-nav-btn-item main-player-control-btn">
                                 <i class="fa-solid fa-ellipsis "></i>
                             </div>
+                        </div>
+
+                        <div class="player-control on-main hide-on-pc hide-on-tablet">
+                            <div class="player-control-progress on-main">
+                                <span class="current-time">00:00</span>
+                                <div class="input-progress-wrap">
+                                    <input id="input-progress-song" type="range" min="0" max="100" value="0" step="0.00001">
+                                    <div class="input-progress-range"></div>
+                                </div>
+                                <span class="duration">00:00</span>
+                            </div>
+                            <div class="player-btn-control-btn on-main">
+                                <i class="fa-solid fa-shuffle hide-on-tablet"></i>
+                                <i class="fa-solid fa-backward-step previous-song "></i>
+                                <div class="music-control-song play-btn-control">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="music-control-song pause-btn-control hide">
+                                    <i class="fa-solid fa-pause"></i>
+                                </div>
+                                <i class="fa-solid fa-forward-step next-song"></i>
+                                <i class="fa-solid fa-repeat hide-on-tablet"></i>
+                            </div>
+                            
                         </div>
                     </div>      
                 </div>

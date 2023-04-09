@@ -243,7 +243,6 @@
     } 
 
     .main-music-player {
-        height: 100vh;
         bottom: 0;
         z-index: 100000000;
     }

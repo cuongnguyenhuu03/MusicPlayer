@@ -75,7 +75,7 @@ exitplayer.onclick = function() {
     document.querySelector('.main-music-player ').style.top = ('100vh')
 }
 
-document.querySelector('.music-player').onclick =function() {
+document.querySelector('.player-song').onclick =function() {
     document.querySelector('.main-music-player ').style.top = ('0')
 }
 
