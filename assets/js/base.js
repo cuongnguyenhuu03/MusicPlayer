@@ -22,6 +22,8 @@ document.querySelector('.overlay').onclick = function() {
 document.getElementById("friend").onclick = function() {
     document.querySelector(".friend-container").style.right = "0"
     document.querySelector('.overlay').style.display = "block"
+    document.querySelector('.overlay').classList.add("active")
+
 }
 
 //  overal render 

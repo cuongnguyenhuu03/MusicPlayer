@@ -203,6 +203,12 @@ html {
     background-color:  rgba(0, 0, 0, 0.3);
     z-index: 1000;
     display: none;
+    opacity: 0;
+    transition: all 10s linear;
+}
+
+.overlay.active {
+    opacity: 1;
 }
 
 
@@ -214,4 +220,5 @@ html {
 .input-progress-song {
     cursor: pointer;
 }
+
 

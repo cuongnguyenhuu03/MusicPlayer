@@ -54,6 +54,90 @@ const app = {
     isPlaying: false,
     songs : [
         {
+            audio: './assets/audio/SnapSave.io - Adele - Someone Like You (Official Music Video) (320 kbps).mp3',
+            author: 'Adele',
+            title: 'Some One Like You',
+            pic: './assets/img/songs/someonelikeyou.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Alan Walker - All Falls Down (feat. Noah Cyrus with Digital Farm Animals) (320 kbps).mp3',
+            author: 'Alan Walker',
+            title: 'All Falls Down',
+            pic: './assets/img/songs/all_of_me.png',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Alan Walker - Faded (320 kbps).mp3',
+            author: 'Alan Walker',
+            title: 'Faded',
+            pic: './assets/img/songs/faded.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - AURORA - Runaway (320 kbps).mp3',
+            author: 'Aurora',
+            title: 'RunaWay',
+            pic: './assets/img/songs/runaway.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Avicii - Waiting For Love (320 kbps).mp3',
+            author: 'Avicii',
+            title: 'Waiting For Love',
+            pic: './assets/img/songs/waitingforlove.webp',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - d4vd - Here With Me [Official Music Video] (320 kbps).mp3',
+            author: 'D4vd',
+            title: 'Here With Me',
+            pic: './assets/img/songs/herewwithme.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Gotye - Somebody That I Used To Know (feat. Kimbra) [Official Music Video] (320 kbps).mp3',
+            author: 'Gotye',
+            title: 'Somebody That I Use To Know',
+            pic: './assets/img/songs/somebodythatiussetokonw.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - James Arthur - Say You Wont Let Go (320 kbps).mp3',
+            author: 'James Arthur',
+            title: 'Say You Wont Let Go',
+            pic: './assets/img/songs/sayyouwontletgo.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Lewis Capaldi - Someone You Loved (320 kbps).mp3',
+            author: 'Lewis Capaldi',
+            title: ' Someone You Loved',
+            pic: './assets/img/songs/someoneyoulove.jpg',
+            duratime: ''
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Maroon 5 - Memories (Official Video) (320 kbps).mp3',
+            author: 'Maroon 5',
+            title: 'Memories',
+            pic: './assets/img/songs/memories.jpg',
+            duratime: ''
+        },
+        {
+            audio: './assets/audio/SnapSave.io - P!nk - Just Give Me A Reason ft. Nate Ruess (320 kbps).mp3',
+            author: 'P!nk',
+            title: 'Just Give Me A Reason',
+            pic: './assets/img/songs/justgivemeareason.jpg',
+            duratime: ''
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Shawn Mendes, Camila Cabello - Señorita (320 kbps).mp3',
+            author: 'Shawn Mendes, Camila Cabello',
+            title: 'Señorita',
+            pic: './assets/img/songs/senorita.jpg',
+            duratime: ''
+        },
+        {
             audio: './assets/audio/To_The_Moon.mp3',
             author: 'Hooligan',
             title: 'To The Moon',
@@ -359,9 +443,7 @@ const app = {
         })
 
         audio.onended = function() {
-            nextSongs.forEach(nextsong => {
-                nextsong.click()
-            })
+            nextSongs[1].click()
         }     
     },
 
