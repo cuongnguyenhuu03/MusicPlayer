@@ -77,7 +77,7 @@ exitplayer.onclick = function() {
     document.querySelector('.main-music-player ').style.top = ('100vh')
 }
 
-document.querySelector('.player-song').onclick =function() {
+document.querySelector('.music-player').onclick =function() {
     document.querySelector('.main-music-player ').style.top = ('0')
 }
 
@@ -117,13 +117,14 @@ setInterval(function(){
     }
 },3000)
 
+document.querySelectorAll('#input-progress-song').forEach((progress)=>{
+    progress.oninput = function(e) {
+        e.stopPropagation()
+    }    
+})
 
-// stop Propagation in control btn 
-
-document.querySelector('.player-control').onclick = function(e) {
-    e.stopPropagation()
-}
-
-document.querySelector('#volume-range').onclick = function(e) {
-    e.stopPropagation()
-}
+document.querySelectorAll('input-progress-wrap').forEach((progress)=>{
+    progress.onclick = function(e) {
+        e.stopPropagation()
+    }    
+})

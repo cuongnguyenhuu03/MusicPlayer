@@ -153,7 +153,7 @@
         bottom: 50px;
         right: 0;
         left: 0;
-        height: 50px;
+        height: 54px;
     }
 
     .music-player-block {
@@ -161,8 +161,8 @@
     }
 
     .player-song-img {
-        height: 40px;
-        width: 40px;
+        height: 36px;
+        width: 36px;
     }
 
     .player-song,
@@ -261,6 +261,32 @@
 
     .main-music-player-content {
         height: 100%;
+    }
+
+    .music-control-song.no-background {
+        background-color: transparent;
+    }
+
+    .player-song-info-title.limit-width {
+        width: 130px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .player-song-info-author.limit-width {
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .container-nav-search-input-input-form {
+        width: 160px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-right: 20px;
     }
 }
 
