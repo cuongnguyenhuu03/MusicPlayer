@@ -1,6 +1,8 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
+const PLAYER_STORAGE_KEY = 'user'
+
 const playlist = $('.overal-content-songs-list');
 const mainlist = $('.main-music-player-song-list')
 const playlistImg = $('.overal-content-songs-img');
@@ -55,6 +57,13 @@ const app = {
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
+
+    config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
+    setConfig: function(key,value) {
+        this.config[key] = value
+        localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(this.config))
+    },
+
     count: 0, // count song 
     playedIndex: [],
     songs : [
@@ -254,8 +263,8 @@ const app = {
     renderSongs: function() {
         const htmls = this.songs.map((song,index) => {
             return `
-                <li class="overal-content-songs-item">
-                    <div class="overal-content-songs-item-img" style="background-image:url(${song.pic}) ;">
+                <li class="overal-content-songs-item" data-index = "${index}">
+                    <div class="overal-content-songs-item-img" style="background-image:url(${song.pic})">
                         <i id="play-btn"class="fa-solid fa-play"></i>
                         <div class="blur-backgound"></div>
                         <img class="active-song-img" src="./assets/img/icon/icon-playing.gif" alt="">
@@ -364,8 +373,8 @@ const app = {
 
             let listSongs = $$('.overal-content-songs-item');
             listSongs[_this.currentIndex].classList.add('active');
+            console.log(listSongs[_this.currentIndex + _this.songs.length]);
             listSongs[_this.currentIndex + _this.songs.length].classList.add('active');
-            console.log(listSongs)
         }
 
         audio.onpause = function() {
@@ -504,9 +513,10 @@ const app = {
         randomBtns.forEach((randomBtn, index) => {
             randomBtn.onclick = function(e) {
                 _this.isRandom = !_this.isRandom
+                _this.setConfig('isRandom', _this.isRandom)
                 e.stopPropagation()
                 randomBtns.forEach((randomBtn, index) => {
-                    randomBtn.classList.toggle('active')
+                    randomBtn.classList.toggle('active',this.isRandom)
                 })
             }
         })
@@ -515,12 +525,46 @@ const app = {
         repeatBtns.forEach((repeatBtn, index)=> {
             repeatBtn.onclick = function(e) {
                 _this.isRepeat = !_this.isRepeat
+                _this.setConfig('isRepeat', _this.isRepeat)
                 e.stopPropagation()
                 repeatBtns.forEach((repeatbtn, index)=> {
-                    repeatbtn.classList.toggle('active')
+                    repeatbtn.classList.toggle('active',this.isRepeat)
                 })
             }
         })
+
+        // handle click to song item on playlist 
+        playlist.onclick = function(e) {
+            const songElement = e.target.closest('.overal-content-songs-item:not(.active)')
+
+            // click to song that we want to listen
+            if( songElement || e.target.closest('.like-btn')){
+                  if(songElement) {
+                    _this.currentIndex = songElement.getAttribute("data-index")
+                    _this.renderCurentSong()
+                    audio.play()
+                  }
+                  else if(e.target.closest('.like-btn')){
+                    // click into like btn  
+                  }
+            }
+        }
+
+        mainlist.onclick = function(e) {
+            const songElement = e.target.closest('.overal-content-songs-item:not(.active)')
+
+            // click to song that we want to listen
+            if( songElement || e.target.closest('.like-btn')){
+                  if(songElement) {
+                    _this.currentIndex = Number(songElement.getAttribute("data-index"))
+                    _this.renderCurentSong()
+                    audio.play()
+                  }
+                  else if(e.target.closest('.like-btn')){
+                    // click into like btn  
+                  }
+            }
+        }
     },
 
     // handle next/previous song 
@@ -583,12 +627,26 @@ const app = {
             })
     },
 
+    loadConfig: function() {
+        this.isRandom = this.config.isRandom
+        this.isRepeat = this.config.isRepeat
+
+        randomBtns.forEach((e)=> {
+            e.classList.toggle('active',this.isRandom)
+        })
+        repeatBtns.forEach((e)=> {
+            e.classList.toggle('active',this.isRepeat)
+        })
+    },
+
     start : function() {
+        this.loadConfig()
         this.definePropertys()
         this.handleEvent()
         this.renderSongs()
         this.renderSongsImg()
         this.renderCurentSong()
+        console.log(this.config)
     }
 }
 
