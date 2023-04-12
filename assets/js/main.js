@@ -15,7 +15,7 @@ const mainAuthorcurrentsong = $('.main-music-player-song-singer');
 const audio = $('#audio');
 const playbtns = $$('.play-btn-control');
 const pausebtns = $$('.pause-btn-control');
-const currentTime = $('.current-time');
+const currentTimeSong = $('.current-time');
 const duration = $$('.duration');
 const progresses = $$('#input-progress-song');
 const nextSongs = $$('.next-song');
@@ -23,8 +23,8 @@ const prevSongs = $$('.previous-song');
 const songRanges = $$('.input-progress-range');
 const randomBtns = $$('.random-btn')
 const repeatBtns = $$('.repeat-btn');
-
-
+const volumeRange = $('#volume-range')
+const progressVolume = $('.progress-volume');
 
 var imgAnimation = [
     {
@@ -53,16 +53,19 @@ animations.pause();
 animationsMainImg.pause();
 
 const app = {
-    currentIndex: 0,
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
+    minuteTime: 0,
+    secondTime: 0,
 
     config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
     setConfig: function(key,value) {
         this.config[key] = value
         localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(this.config))
     },
+
+    currentIndex: 0,
 
     count: 0, // count song 
     playedIndex: [],
@@ -355,6 +358,7 @@ const app = {
         })
 
         audio.onplay = function() {
+            _this.setConfig('currenIndex', _this.currentIndex)
             playbtns.forEach((playbtn,index)=> {
                 playbtn.classList.add('hide')
             })
@@ -375,6 +379,8 @@ const app = {
             listSongs[_this.currentIndex].classList.add('active');
             console.log(listSongs[_this.currentIndex + _this.songs.length]);
             listSongs[_this.currentIndex + _this.songs.length].classList.add('active');
+        console.log(audio.volume);
+
         }
 
         audio.onpause = function() {
@@ -393,6 +399,7 @@ const app = {
                     e.classList.remove('active');
                 })
             }
+
         }
 
         // when progress of song change
@@ -409,6 +416,7 @@ const app = {
                 songRanges.forEach((songRange,index)=> {
                     songRange.style.width = '0'
                 })
+                currentTimeSong.textContent = ('00:00')
             }
             else {
                 const progressPercent = audio.currentTime / audio.duration * 100
@@ -418,6 +426,17 @@ const app = {
                 progresses.forEach((progress) => {
                     progress.value = progressPercent 
                 })
+
+                var currentMinute = Math.floor(audio.duration * progressPercent /100 /60);
+                var currentSecond = Math.floor((audio.duration * progressPercent /100) %60);
+
+                if(currentMinute < 1) {
+                    currentTimeSong.textContent = (currentSecond < 10? '00' + ':' + '0' +currentSecond : '00' + ':' +currentSecond )
+                }else {
+                    currentTimeSong.textContent = (currentSecond < 10? '0' + currentMinute + ':' + '0' +currentSecond : '0' + currentMinute + ':' +currentSecond )
+
+                }
+
             }
         }
 
@@ -447,22 +466,56 @@ const app = {
                         progresses.forEach((progress) => {
                             progress.value = progressPercent 
                         })
+
+                        var currentMinute = Math.floor(audio.duration * progressPercent /100 /60);
+                        var currentSecond = Math.floor((audio.duration * progressPercent /100) %60);
+
+                        console.log(currentSecond)
+                        console.log(currentMinute)
+
+                        if(currentMinute < 1) {
+                            currentTimeSong.textContent = (currentSecond < 10? '00' + ':' + '0' +currentSecond : '00' + ':' +currentSecond )
+                        }else {
+                            currentTimeSong.textContent = (currentSecond < 10? '0' + currentMinute + ':' + '0' +currentSecond : '0' + currentMinute + ':' +currentSecond )
+                        }
                     }
                 }
             }
         })
-        // 
+
+        // seek
         progresses.forEach((progress)=>{
             progress.oninput = function(e) {
                 e.stopPropagation()
                 songRanges.forEach((songRange,index)=> {
                     songRange.style.width = this.value + '%' 
                 })
-                audio.ontimeupdate = function() {}
+                audio.ontimeupdate = function() {
+
+                    const progressPercent = audio.currentTime / audio.duration * 100
+                    var currentMinute = Math.floor(audio.duration * progressPercent /100 /60);
+                    var currentSecond = Math.floor((audio.duration * progressPercent /100) %60);
+                    if(currentMinute < 1) {
+                        currentTimeSong.textContent = (currentSecond < 10? '00' + ':' + '0' +currentSecond : '00' + ':' +currentSecond )
+                    }else {
+                        currentTimeSong.textContent = (currentSecond < 10? '0' + currentMinute + ':' + '0' +currentSecond : '0' + currentMinute + ':' +currentSecond )
+                    }
+                }
             }  
         })
 
-        // handle next/prev song 
+        // handle volume
+
+        volumeRange.oninput = function(e){
+            e.stopPropagation()
+            const progressPercentVolume  = this.value
+            console.log(progressPercentVolume);
+
+            progressVolume.style.width = progressPercentVolume + 'px';
+            audio.volume = progressPercentVolume / 100;
+        }
+
+        //handle next/prev song 
 
         nextSongs.forEach((nextSong, index)=> {
             nextSong.onclick = function(e) {
@@ -573,7 +626,8 @@ const app = {
         if(this.currentIndex === this.songs.length){
             this.currentIndex = 0;
         }
-        this.renderCurentSong();          
+        this.renderCurentSong(); 
+         
     },
 
     playPrevSong : function() {
@@ -640,15 +694,16 @@ const app = {
     },
 
     start : function() {
+        this.currentIndex = (Number(app.config.currenIndex))
         this.loadConfig()
         this.definePropertys()
         this.handleEvent()
         this.renderSongs()
         this.renderSongsImg()
         this.renderCurentSong()
-        console.log(this.config)
     }
 }
 
 app.start();
+
 

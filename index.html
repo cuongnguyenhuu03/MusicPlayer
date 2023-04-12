@@ -2421,8 +2421,8 @@
                         <i class="fa-solid fa-volume-low hide" id="low-volume"></i>
                         <i class="fa-solid fa-volume-xmark hide" id="mute-volume"></i>
                         <div class="player-option-range-wrap">
-                            <input id="volume-range" type="range" min="0" max="100" value="0">
-                            <div class="player-option-range"></div>
+                            <input id="volume-range" type="range" min="0" max="100" value="50">
+                            <div class="progress-volume"></div>
                         </div>
                         <i class="fa-solid fa-list-check near-listened-song hide-on-tablet"></i>
                     </div>
@@ -2731,7 +2731,11 @@
                                     <input id="input-progress-song" type="range" min="0" max="100" value="0" step="0.00001">
                                     <div class="input-progress-range"></div>
                                 </div>
-                                <span class="duration">00:00</span>
+                                <div class="current-time">
+                                    <span class="current-time-minute">00</span>
+                                    <span>:</span>
+                                    <span class="current-time-second">00</span>
+                                </div>
                             </div>
                             <div class="player-btn-control-btn on-main">
                                 <i class="fa-solid fa-shuffle hide-on-tablet random-btn"></i>

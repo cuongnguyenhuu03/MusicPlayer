@@ -1766,3 +1766,17 @@
     color: var(--active-text-color);
 }
 
+.current-time {
+    display: flex;
+}
+
+.progress-volume {
+    width: 50%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #7200a1;
+}
+
+#volume-range {
+    background-color: transparent;
+}
