@@ -71,6 +71,259 @@ const app = {
     playedIndex: [],
     songs : [
         {
+            audio: './assets/audio/SnapSave.io - Avicii - The Nights (Lyrics) (320 kbps).mp3',
+            author: 'Avicii',
+            title: 'The Nights',
+            pic: './assets/img/songs/thenight.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Avicii - Waiting For Love (320 kbps).mp3',
+            author: 'Avicii',
+            title: 'Waiting For Love',
+            pic: './assets/img/songs/waitingforlove.webp',
+            duratime: '03:50'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - (Vietsub + Lyrics) WITH YOU (NGẪU HỨNG) _ HOAPROX, NICK STRAND & MIO (320 kbps).mp3',
+            author: 'HOAPROX, NICK STRAND & MIO',
+            title: 'With You',
+            pic: './assets/img/songs/withyou.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Alan Walker - Unity (Lyrics) ft. Walkers (320 kbps).mp3',
+            author: 'Alan Walker',
+            title: 'Unity',
+            pic: './assets/img/songs/unity.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - ZAYN & Sia - Dusk Till Dawn (Lyrics) (320 kbps).mp3',
+            author: 'ZAYN & Sia',
+            title: 'Dusk Till Dawn',
+            pic: './assets/img/songs/dustilldown.jpg',
+            duratime: '03:55'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - TheFatRat - The Calling (feat. Laura Brehm) (320 kbps).mp3',
+            author: 'TheFatRat',
+            title: 'The Calling',
+            pic: './assets/img/songs/thecalling.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - TheFatRat & Anjulie - Close To The Sun (320 kbps) (1).mp3',
+            author: 'TheFatRat & Anjulie',
+            title: 'Close To The Sun',
+            pic: './assets/img/songs/closethesun.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - TheFatRat - Never Be Alone (320 kbps).mp3',
+            author: 'TheFatRat',
+            title: 'Never Be Alone',
+            pic: './assets/img/songs/neverbealone.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Alan Walker - Sing Me To Sleep (320 kbps).mp3',
+            author: 'Alan Walker',
+            title: 'Sing Me To Sleep',
+            pic: './assets/img/songs/singmetosleep.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Alan Walker - Alone (320 kbps).mp3',
+            author: 'Alan Walker',
+            title: 'Alone',
+            pic: './assets/img/songs/alone.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Sleep On The Floor __ The Lumineers Lyrics (320 kbps).mp3',
+            author: 'The Lumineers',
+            title: 'Sleep On The Floor',
+            pic: './assets/img/songs/sleepontheflor.jpg',
+            duratime: '03:32'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Ed Sheeran - Happier (Official Music Video) (320 kbps).mp3',
+            author: 'Ed Sheeran',
+            title: 'Happier',
+            pic: './assets/img/songs/happier.jpg',
+            duratime: '03:35'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Ava Max - Sweet but Psycho (Lyrics) (320 kbps).mp3',
+            author: 'Ava Max',
+            title: 'Sweet but Psycho',
+            pic: './assets/img/songs/sweetbutpssycho.jpg',
+            duratime: '03:07'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - [Vietsub + Lyrics] The One That Got Away - Brielle Von Hugel (Katy Perry Cover) (320 kbps).mp3',
+            author: 'Brielle Von Hugel',
+            title: 'The One That Got Away',
+            pic: './assets/img/songs/theonethatgotawway.png',
+            duratime: '04:07'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Love Story - Taylor Swift (Lyrics & Vietsub) (320 kbps).mp3',
+            author: 'Taylor Swift',
+            title: 'Love Story',
+            pic: './assets/img/songs/blankspace.png',
+            duratime: '04:28'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - The Weeknd - Out Of Time  (Lyrics) (320 kbps).mp3',
+            author: 'The Weeknd',
+            title: 'Out Of Time',
+            pic: './assets/img/songs/saveyourtear.jpeg',
+            duratime: '03:39'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - James Blunt - Youre Beautiful (Official Music Video) [4K] (320 kbps).mp3',
+            author: 'James Blunt',
+            title: 'You are Beautiful',
+            pic: './assets/img/songs/yourbeautiful.jpg',
+            duratime: '03:22'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Vietsub _ Jar Of Hearts - Christina Perri _ Lyrics Video (320 kbps).mp3',
+            author: 'Christina Perri',
+            title: 'Jar Of Hearts',
+            pic: './assets/img/songs/whodoyouthinkyouare.jpg',
+            duratime: '04:31'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - So Far Away (Acoustic) - Martin Garrix & David Guetta (Cover by Adam Christopher) (320 kbps).mp3',
+            author: 'Adam Christopher',
+            title: 'So Far Away',
+            pic: './assets/img/songs/sofaraway.jpg',
+            duratime: '02:51'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Selena Gomez - Kill Em With Kindness (320 kbps).mp3',
+            author: 'Selena Gomez',
+            title: 'Kill Em With Kindness',
+            pic: './assets/img/songs/killmewithkindess.jpg',
+            duratime: '03:44'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Selena Gomez - Lose You To Love Me (Official Music Video) (320 kbps).mp3',
+            author: 'Selena Gomez',
+            title: 'Lose You To Love Me',
+            pic: './assets/img/songs/loseyoutoloveme.png',
+            duratime: '03:27'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Selena Gomez - Feel Me (Lyrics) (320 kbps).mp3',
+            author: 'Selena Gomez',
+            title: 'Feel Me',
+            pic: './assets/img/songs/feelme.jpg',
+            duratime: '03:46'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - [Vietsub + Lyrics] Thinking Out Loud - Ed Sheeran (320 kbps).mp3',
+            author: 'Ed Sheeran',
+            title: 'Thinking Out Loud',
+            pic: './assets/img/songs/thinkoutloud.jpg',
+            duratime: '04:42'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Selena Gomez - The Heart Wants What It Wants (Official Video) (320 kbps).mp3',
+            author: 'Selena Gomez',
+            title: 'The Heart Wants What It Wants',
+            pic: './assets/img/songs/theheartwwantwhatitwant.jpg',
+            duratime: '04:35'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Taylor Swift - Blank Space (320 kbps).mp3',
+            author: 'Taylor Swift',
+            title: 'Blank Space',
+            pic: './assets/img/songs/blankspace.png',
+            duratime: '04:32'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Taylor Swift - You Belong With Me (320 kbps).mp3',
+            author: 'Taylor Swift',
+            title: 'You Belong With Me',
+            pic: './assets/img/songs/youbelongwwithme.jpg',
+            duratime: '03:48'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Charlie Puth - River [Official Audio] (128 kbps).mp3',
+            author: 'Charlie Puth',
+            title: 'River',
+            pic: './assets/img/songs/river.jpg',
+            duratime: '03:11'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Wiz Khalifa - See You Again ft. Charlie Puth [Official Video] Furious 7 Soundtrack (128 kbps).mp3',
+            author: 'Wiz Khalifa ft. Charlie Puth',
+            title: 'See You Again ft',
+            pic: './assets/img/songs/seeyouagain.jpg',
+            duratime: '03:57'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Charlie Puth - That’s Not How This Works (Lyrics) ft. Dan + Shay (320 kbps).mp3',
+            author: 'Charlie Puth',
+            title: 'That’s Not How This Works',
+            pic: './assets/img/songs/thatnothowitwwork.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Charlie Puth - _How Long_ [Official Video] (128 kbps).mp3',
+            author: 'Charlie Puth',
+            title: 'How Long',
+            pic: './assets/img/songs/thatnothowitwwork.jpg',
+            duratime: '04:45'
+        },
+
+        {
+            audio: './assets/audio/SnapSave.io - Attention (128 kbps).mp3',
+            author: 'Charlie Puth',
+            title: 'Attention',
+            pic: './assets/img/songs/thatnothowitwwork.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - DJ Snake ft. Justin Bieber - Let Me Love You [Lyric Video] (320 kbps).mp3',
+            author: 'DJ Snake ft. Justin Bieber',
+            title: 'Let Me Love You',
+            pic: './assets/img/songs/letmeloveyou.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Adele - Easy On Me (Official Lyric Video) (320 kbps).mp3',
+            author: 'Adele',
+            title: 'Easy On Me',
+            pic: './assets/img/songs/easeyonme.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Adele - Hello (Lyrics) (320 kbps).mp3',
+            author: 'Adele',
+            title: 'Hello',
+            pic: './assets/img/songs/hello.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Adele - Rolling in the Deep (Official Music Video) (320 kbps).mp3',
+            author: 'Adele',
+            title: 'Rolling in the Deep',
+            pic: './assets/img/songs/rollingonthedeep.jpg',
+            duratime: '04:45'
+        },
+        {
+            audio: './assets/audio/SnapSave.io - Set Fire to the Rain (320 kbps).mp3',
+            author: 'Adele',
+            title: 'Set Fire to the Rain',
+            pic: './assets/img/songs/hello.jpg',
+            duratime: '04:45'
+        },
+        {
             audio: './assets/audio/SnapSave.io - Adele - Someone Like You (Official Music Video) (320 kbps).mp3',
             author: 'Adele',
             title: 'Some One Like You',
@@ -97,13 +350,6 @@ const app = {
             title: 'RunaWay',
             pic: './assets/img/songs/runaway.jpg',
             duratime: '04:10'
-        },
-        {
-            audio: './assets/audio/SnapSave.io - Avicii - Waiting For Love (320 kbps).mp3',
-            author: 'Avicii',
-            title: 'Waiting For Love',
-            pic: './assets/img/songs/waitingforlove.webp',
-            duratime: '03:50'
         },
         {
             audio: './assets/audio/SnapSave.io - d4vd - Here With Me [Official Music Video] (320 kbps).mp3',
@@ -682,19 +928,31 @@ const app = {
     },
 
     loadConfig: function() {
+        // load index 
+        if(!Number(app.config.currenIndex)){
+            this.currentIndex = 0
+        }else{
+            this.currentIndex = (Number(app.config.currenIndex))
+        }
+        // load option
         this.isRandom = this.config.isRandom
         this.isRepeat = this.config.isRepeat
 
-        randomBtns.forEach((e)=> {
-            e.classList.toggle('active',this.isRandom)
-        })
-        repeatBtns.forEach((e)=> {
+
+        if(this.isRandom) {
+            randomBtns.forEach((e)=> {
+                e.classList.add('active')
+            })
+        }
+        
+        if(this.isRepeat){
+            repeatBtns.forEach((e)=> {
             e.classList.toggle('active',this.isRepeat)
-        })
+            })
+        }        
     },
 
     start : function() {
-        this.currentIndex = (Number(app.config.currenIndex))
         this.loadConfig()
         this.definePropertys()
         this.handleEvent()
