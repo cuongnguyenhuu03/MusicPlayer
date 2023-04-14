@@ -934,6 +934,7 @@ const app = {
         }else{
             this.currentIndex = (Number(app.config.currenIndex))
         }
+
         // load option
         this.isRandom = this.config.isRandom
         this.isRepeat = this.config.isRepeat
@@ -949,7 +950,7 @@ const app = {
             repeatBtns.forEach((e)=> {
             e.classList.toggle('active',this.isRepeat)
             })
-        }        
+        }           
     },
 
     start : function() {
